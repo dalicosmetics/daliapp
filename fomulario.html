@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario - Dali Cosmetics</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="formulario">
+    <h2>Completa tus datos para generar la factura</h2>
+    <form id="formFactura">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required><br>
+
+      <label for="documento">Cédula / NIT:</label>
+      <input type="text" id="documento" required><br>
+
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" required><br>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" required><br>
+
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" required><br>
+
+      <button type="submit">Generar Factura y Enviar a WhatsApp</button>
+    </form>
+  </main>
+
+  <!-- Librería jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script>
+    document.getElementById("formFactura").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      // 📌 1. Datos del cliente
+      const cliente = {
+        nombre: document.getElementById("nombre").value,
+        documento: document.getElementById("documento").value,
+        correo: document.getElementById("correo").value,
+        telefono: document.getElementById("telefono").value,
+        direccion: document.getElementById("direccion").value
+      };
+
+      // 📌 2. Obtener carrito
+      const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+      if (carrito.length === 0) {
+        alert("Tu carrito está vacío.");
+        return;
+      }
+
+      // 📌 3. Crear PDF con jsPDF
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      doc.setFontSize(18);
+      doc.text("Factura - Dali Cosmetics", 70, 20);
+
+      const fecha = new Date().toLocaleDateString();
+      doc.setFontSize(12);
+      doc.text(`Fecha: ${fecha}`, 10, 40);
+
+      // Datos cliente
+      doc.text(`Nombre: ${cliente.nombre}`, 10, 50);
+      doc.text(`Documento: ${cliente.documento}`, 10, 57);
+      doc.text(`Correo: ${cliente.correo}`, 10, 64);
+      doc.text(`Teléfono: ${cliente.telefono}`, 10, 71);
+      doc.text(`Dirección: ${cliente.direccion}`, 10, 78);
+
+      // Encabezado tabla
+      let y = 95;
+      doc.text("Producto", 10, y);
+      doc.text("Cant.", 90, y);
+      doc.text("Precio", 120, y);
+      doc.text("Subtotal", 160, y);
+      y += 10;
+
+      let total = 0;
+
+      carrito.forEach(p => {
+        const precioUnitario = p.precio || 0;
+        const subtotal = precioUnitario * p.cantidad;
+        total += subtotal;
+
+        doc.text(p.nombre, 10, y);
+        doc.text(String(p.cantidad), 95, y);
+        doc.text(`$${precioUnitario.toLocaleString()}`, 120, y);
+        doc.text(`$${subtotal.toLocaleString()}`, 160, y);
+        y += 10;
+      });
+
+      doc.setFontSize(14);
+      doc.text(`Total: $${total.toLocaleString()}`, 120, y + 10);
+
+      // Guardar PDF
+      doc.save("factura.pdf");
+
+      // 📌 4. Enviar mensaje a WhatsApp
+      let mensaje = `*Nueva Factura - Dali Cosmetics*%0A`;
+      mensaje += `👤 Nombre: ${cliente.nombre}%0A🪪 Documento: ${cliente.documento}%0A📧 Correo: ${cliente.correo}%0A📞 Teléfono: ${cliente.telefono}%0A🏠 Dirección: ${cliente.direccion}%0A%0A`;
+      mensaje += `🛍️ *Detalle del pedido*:%0A`;
+
+      carrito.forEach(p => {
+        const precioUnitario = p.precio || 0;
+        const subtotal = precioUnitario * p.cantidad;
+        mensaje += `- ${p.nombre} (x${p.cantidad}) $${subtotal.toLocaleString()}%0A`;
+      });
+
+      mensaje += `%0A💰 Total: $${total.toLocaleString()}`;
+
+      // Número WhatsApp corporativo
+      const numero = "573106948018"; // cambia por el tuyo
+
+      window.open(`https://wa.me/${numero}?text=${mensaje}`, "_blank");
+    });
+  </script>
+</body>
+</html>

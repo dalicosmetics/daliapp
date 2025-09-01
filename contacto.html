@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff69b4">
+  <title>Contacto - Dali Cosmetics</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script>
+    // Función para generar el enlace de WhatsApp con los datos del formulario
+    function enviarFormulario() {
+      var nombre = document.getElementById("name").value;
+      var correo = document.getElementById("email").value;
+      var telefono = document.getElementById("phone").value;
+      var mensaje = document.getElementById("message").value;
+
+      // Crear el mensaje que se enviará por WhatsApp
+      var texto = `*Nombre:* ${nombre}%0A*Correo:* ${correo}%0A*Teléfono:* ${telefono}%0A*Mensaje:* ${mensaje}`;
+      
+      // Crear el enlace de WhatsApp con los datos del formulario
+      var url = `https://wa.me/573000000000?text=${texto}`;
+
+      // Redirigir al usuario al enlace de WhatsApp
+      window.open(url, "_blank");
+    }
+  </script>
+</head>
+<body data-boton-whatsapp="true" data-boton-carrito="true" data-boton-catalogo="true">
+  <div class="announcement-bar">
+    <div class="marquee">
+      <span>Todos nuestros productos aplican en UNIDADES</span>
+      <span>Lleva productos con precio MAYORISTA a partir de 5 unidades de la misma referencia</span>
+      <span>¡Nueva colección disponible!</span>
+      <span>Pago Contra Entrega en Bogotá</span>
+      <span>Monto mínimo $300.000</span>
+      <span>Descuento 3% en compras mayores a $3.000.000</span>
+      <span>¡Nueva colección disponible!</span>
+      <span>Envío gratis en pedidos superiores a $500.000</span>
+    </div>
+  </div>
+  
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg main-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand logo-container" href="index.html">
+          <img src="./assets/img/minilogo.png" alt="Logo Dali Cosmetics" class="nav-logo">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="contact-form-container">
+    <h2>Contáctanos</h2>
+    <form onsubmit="event.preventDefault(); enviarFormulario();">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" id="name" name="name" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="phone" class="form-label">Teléfono</label>
+        <input type="tel" id="phone" name="phone" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="message" class="form-label">Tu Mensaje</label>
+        <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-pinky">Enviar</button>
+    </form>
+  </div>
+
+
+  
+<div id="footer-placeholder"></div>
+<!-- Importar footer dinámico -->
+  <script>
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+  </script>
+
+<!-- Script de WhatsApp -->
+<script src="js/whatsapp.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

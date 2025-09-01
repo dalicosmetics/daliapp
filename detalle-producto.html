@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle Producto - Dali Cosmetics</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* === Estilos del Zoom lateral === */
+    #zoom-sidebar {
+      flex: 1;
+      display: none;
+      border: 1px solid var(--border, #ddd);
+      border-radius: 12px;
+      overflow: hidden;
+      max-width: 400px;
+      max-height: 400px;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    #zoom-sidebar.activo {
+      display: block;
+    }
+    #zoom-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.2s ease;
+    }
+  </style>
+</head>
+<body data-boton-whatsapp="true" data-boton-carrito="true" data-boton-catalogo="true">
+
+  <!-- 🔔 Barra de anuncios -->
+  <div class="announcement-bar">
+    <div class="marquee">
+      <span>Todos nuestros productos aplican en UNIDADES</span>
+      <span>Lleva productos con precio MAYORISTA a partir de 5 unidades de la misma referencia</span>
+      <span>¡Nueva colección disponible!</span>
+      <span>Pago Contra Entrega en Bogotá</span>
+      <span>Monto mínimo $300.000</span>
+      <span>Descuento 3% en compras mayores a $3.000.000</span>
+      <span>¡Nueva colección disponible!</span>
+      <span>Envío gratis en pedidos superiores a $500.000</span>
+    </div>
+  </div>
+
+  <!-- 🔹 HEADER PRINCIPAL (igual que en index) -->
+  <header class="main-header">
+    <!-- NAV PRINCIPAL -->
+    <nav class="navbar navbar-expand-lg main-nav">
+      <div class="container-fluid position-relative">
+        <!-- LOGO -->
+        <a class="navbar-brand logo-container" href="index.html">
+          <img src="./assets/img/minilogo.png" alt="Logo Dali Cosmetics" class="nav-logo">
+        </a>
+
+        <!-- BOTÓN HAMBURGUESA -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- LINKS DERECHA -->
+        
+      </div>
+    </nav>
+
+    <!-- SUBNAV -->
+    <nav class="navbar subnav">
+      <div class="container-fluid justify-content-center">
+        <ul class="navbar-nav d-flex flex-wrap justify-content-center subnav-links">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" id="btn-catalogo">
+              <i class="fa-solid fa-store"></i> Catálogo
+            </a>
+            <a class="nav-link" href="carrito.html" id="btn-catalogo">
+              <i class="fa-solid fa-store"></i> Carrito
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================================
+       CONTENIDO PRINCIPAL
+  ================================= -->
+  <main>
+    <!-- DETALLE DEL PRODUCTO -->
+    <section class="detalle-producto">
+      <div class="producto-info">
+
+        <!-- Galería -->
+        <div class="galeria-producto">
+          <div class="imagen-principal-container">
+            <img id="producto-imagen" src="" alt="Imagen del Producto" class="imagen-principal">
+          </div>
+          <div id="producto-thumbs" class="galeria-thumbs" aria-label="Más imágenes del producto" role="list"></div>
+        </div>
+
+        <!-- Zoom lateral -->
+        <div id="zoom-sidebar">
+          <img id="zoom-img" src="" alt="Zoom producto">
+        </div>
+
+        <!-- Info producto -->
+        <div class="descripcion">
+          <h2 id="producto-nombre">Nombre del Producto</h2>
+          <p id="producto-categoria">Categoría: <span></span></p>
+          <p id="producto-precio">Precio: $</p>
+          <p id="producto-descripcion">Descripción del producto</p>
+
+          <div class="acciones-carrito">
+            <label for="cantidad">Cantidad:</label>
+            <div class="stepper">
+              <button class="step-btn" id="decrement">−</button>
+              <input type="text" id="cantidad" value="1" readonly>
+              <button class="step-btn" id="increment">+</button>
+            </div>
+            <button class="btn agregar">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS RECOMENDADOS -->
+    <section class="recomendados">
+      <h2>Productos Recomendados</h2>
+      <div class="carousel">
+        <button id="prev" class="carousel-btn prev">⟨</button>
+        <div class="carousel-window">
+          <div id="carousel-track" class="carousel-track"></div>
+        </div>
+        <button id="next" class="carousel-btn next">⟩</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <!-- Placeholder para el footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Importar footer dinámico -->
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <!-- Scripts -->
+  <script type="module" src="js/detalle-producto.js"></script>
+
+  <!-- Modal carrito -->
+  <div id="modal-carrito" class="modal">
+    <div class="modal-contenido">
+      <p>Producto agregado exitosamente 🎉</p>
+    </div>
+  </div>
+
+  <!-- Script del Zoom -->
+  <script>
+    const imgPrincipal = document.getElementById("producto-imagen");
+    const zoomSidebar = document.getElementById("zoom-sidebar");
+    const zoomImg = document.getElementById("zoom-img");
+
+    imgPrincipal.addEventListener("mouseenter", () => {
+      zoomSidebar.classList.add("activo");
+      zoomImg.src = imgPrincipal.src;
+    });
+
+    imgPrincipal.addEventListener("mousemove", (e) => {
+      const rect = imgPrincipal.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      zoomImg.style.transformOrigin = `${x}% ${y}%`;
+      zoomImg.style.transform = "scale(2)";
+    });
+
+    imgPrincipal.addEventListener("mouseleave", () => {
+      zoomSidebar.classList.remove("activo");
+      zoomImg.style.transform = "scale(1)";
+    });
+  </script>
+  <!-- Script de WhatsApp -->
+  <script src="js/whatsapp.js"></script>
+</body>
+</html>

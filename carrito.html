@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - Dali Cosmetics</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-boton-whatsapp="true" data-boton-carrito="false" data-boton-catalogo="true">
+  <!-- Overlay de carga -->
+  <div id="overlay">
+    <div class="overlay-content">
+      <img src="./assets/img/minilogo.png" alt="Logo" class="overlay-logo">
+      <div class="spinner"></div>
+      <p>Generando factura, por favor espera...</p>
+    </div>
+  </div>
+
+  <!-- 🔔 Barra de anuncios -->
+  <div class="announcement-bar">
+    <div class="marquee">
+      <span>Todos nuestros productos aplican en UNIDADES</span>
+      <span>Lleva productos con precio MAYORISTA a partir de 5 unidades de la misma referencia</span>
+      <span>¡Nueva colección disponible!</span>
+      <span>Pago Contra Entrega en Bogotá</span>
+      <span>Monto mínimo $300.000</span>
+      <span>Descuento 3% en compras mayores a $3.000.000</span>
+      <span>¡Nueva colección disponible!</span>
+      <span>Envío gratis en pedidos superiores a $500.000</span>
+    </div>
+  </div>
+
+  <!-- 🔹 HEADER -->
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg main-nav">
+      <div class="container-fluid position-relative">
+        <a class="navbar-brand logo-container" href="index.html">
+          <img src="./assets/img/minilogo.png" alt="Logo Dali Cosmetics" class="nav-logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="carrito">
+    <h2>Tu Carrito 🛍️</h2>
+
+    <!-- 🔹 LISTA DEL CARRITO -->
+    <section id="lista-carrito"></section>
+    <p id="total"></p>
+
+    <!-- 🔹 BOTONES -->
+    <div class="acciones-carrito">
+      <button id="continuar" class="btn-volver">Volver al Catalogo</button>
+      <button id="factura" class="btn-factura">Generar factura</button>
+    </div>
+  </main>
+
+<!-- 🔹 MODAL EMERGENTE -->
+<div id="modal-factura" class="modal">
+  <div class="modal-content">
+    <span class="cerrar">&times;</span>
+    <h3>Completa tus datos</h3>
+
+    <!-- 🌸 Mensaje kawaii motivador -->
+    <div class="mensaje">
+      ✨🌸 ¡Estás a nada de terminar tu proceso de compra! 🌸✨ <br>
+      Envíanos tu factura al <strong>WhatsApp</strong> para finalizar tu pedido 💖
+    </div>
+
+    <form id="form-factura">
+      <label>Nombre:</label>
+      <input type="text" id="modalNombre" required>
+
+      <label>Teléfono:</label>
+      <input type="text" id="modalTelefono" required>
+
+      <label>Dirección:</label>
+      <input type="text" id="modalDireccion" required>
+
+      <label>Correo:</label>
+      <input type="email" id="modalCorreo">
+
+      <button type="submit" class="btn-generar2">Generar factura ✨</button>
+    </form>
+  </div>
+</div>
+
+  <!-- Placeholder para el footer -->
+  <div id="footer-placeholder"></div>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Importar footer dinámico -->
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+   <!-- Script de WhatsApp -->
+   <script src="js/whatsapp.js"></script>
+
+  <!-- Scripts (primero jsPDF, luego tu JS) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/facturaModal.js"></script>
+</body>
+</html>

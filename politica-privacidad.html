@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff69b4">
+  <title>Política de Privacidad - Dali Cosmetics</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body data-boton-whatsapp="true" data-boton-carrito="true" data-boton-catalogo="true">
+    <header class="main-header">
+      <nav class="navbar navbar-expand-lg main-nav">
+        <div class="container-fluid">
+          <a class="navbar-brand logo-container" href="index.html">
+            <img src="./assets/img/minilogo.png" alt="Logo Dali Cosmetics" class="nav-logo">
+          </a>
+        </div>
+      </nav>
+    </header>
+
+  <main class="container py-5">
+    <h2 class="text-center mb-4">Política de Privacidad</h2>
+    <p>En Dali Cosmetics, respetamos tu privacidad y nos comprometemos a proteger la información personal que nos brindas. Esta política explica cómo recopilamos, usamos y protegemos tus datos.</p>
+
+    <h4>1. Principio de Acceso y Circulación Restringida</h4>
+    <p>El tratamiento de tus datos personales se sujeta a los límites establecidos por la ley, la Constitución y esta política. Solo las personas autorizadas por ti o por la ley tendrán acceso a tus datos. Tus datos no estarán disponibles en Internet ni en otros medios masivos de divulgación, salvo que se cumpla con las condiciones legales.</p>
+
+    <h4>2. Principio de Confidencialidad</h4>
+    <p>Todo el personal que maneja tus datos está obligado a garantizar la confidencialidad de la información. Esta obligación persiste incluso después de finalizar su relación con el tratamiento de los datos. Los datos solo se compartirán cuando sea necesario y en los casos autorizados por la ley.</p>
+
+    <h4>3. Principio de Finalidad</h4>
+    <p>El tratamiento de tus datos personales tiene como finalidad gestionar tus compras, enviarte promociones y mejorar la experiencia en Dali Cosmetics, conforme a la Ley 1581 de 2012 y demás normativas vigentes.</p>
+
+    <h4>4. Principio de Legalidad</h4>
+    <p>El tratamiento de tus datos personales se realiza conforme a la Ley Estatutaria 1581 de 2012, el Decreto 1377 de 2013, y otros decretos relacionados. Tu información será tratada de manera legal, transparente y en conformidad con las regulaciones vigentes.</p>
+
+    <h4>5. Principio de Libertad</h4>
+    <p>El tratamiento de tus datos personales solo se llevará a cabo con tu autorización previa, expresa e informada. En algunos casos, como lo estipula la Ley 1581 de 2012, no se requerirá tu autorización para ciertos tipos de tratamiento.</p>
+
+    <h4>6. Principio de Seguridad</h4>
+    <p>Implementamos medidas técnicas y administrativas adecuadas para garantizar la seguridad de tus datos personales, protegiéndolos contra acceso no autorizado, pérdida o alteración.</p>
+
+    <h4>7. Principio de Transparencia</h4>
+    <p>Tienes el derecho a acceder en cualquier momento a la información sobre los datos que almacenamos. Podrás obtener información sobre los datos que te pertenecen y cómo están siendo tratados de manera clara y sin restricciones.</p>
+
+    <h4>8. Principio de Veracidad y Calidad</h4>
+    <p>Nos aseguramos de que los datos que tratamos sean completos, precisos y estén actualizados. No se tratarán datos incompletos o inexactos que puedan inducir a error.</p>
+
+    <h4>9. ¿Qué datos recopilamos?</h4>
+    <p>Recopilamos tu nombre, dirección, correo electrónico y datos de pago cuando realizas una compra o te registras en nuestro sitio.</p>
+
+    <h4>10. Uso de tus datos</h4>
+    <p>Usamos tus datos para procesar tus pedidos, enviarte información relevante sobre nuestros productos y ofertas, y mejorar tu experiencia de compra.</p>
+
+    <h4>11. Protección de tus datos</h4>
+    <p>Utilizamos medidas de seguridad, como el cifrado SSL, para proteger tu información personal durante las transacciones.</p>
+
+    <h4>12. Tus derechos</h4>
+    <p>Tienes el derecho a acceder, rectificar y eliminar tus datos personales. Puedes contactarnos para ejercer estos derechos.</p>
+
+    <p>Si tienes alguna pregunta o inquietud sobre nuestra Política de Privacidad, puedes contactarnos a <a href="mailto:dalicosmetics11@gmail.com">dalicosmetics11@gmail.com</a>.</p>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Importar footer dinámico -->
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <!-- Script de WhatsApp -->
+  <script src="js/whatsapp.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
