@@ -15,7 +15,7 @@ export const productosSeed = [
       "assets/img/labios/balsamo-ositos2.jfif",
     ],
     "Este encantador set incluye 24 bálsamos labiales individuales en adorables envases con forma de osito. Cada bálsamo está diseñado para brindar humectación y un toque de color sutil a tus labios. ¡Perfecto para llevar contigo o para regalar un detalle dulce y útil!",
-    "agotado"
+    "nuevo"
   ),
   new Producto(
     102,
@@ -90,8 +90,8 @@ export const productosSeed = [
     108,
     "Tintas Hello Kitty O'LANNEY",
     "Labios",
-    500000,
-    50,
+    5000,
+    3000,
     [
       "assets/img/labios/tinta-kitty1.jfif",
       "assets/img/labios/tinta-kitty2.jfif",
