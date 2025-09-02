@@ -182,8 +182,8 @@ export const productosSeed = [
     115,
     "Gloss Stich",
     "Labios",
-    500000,
-    200000,
+    5500,
+    3500,
     [
       "assets/img/labios/gloss-stich1.jfif",
       "assets/img/labios/gloss-stich2.jfif",
