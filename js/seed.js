@@ -54,8 +54,8 @@ export const productosSeed = [
     105,
     "Labial Metalizado de Iman Of Noble",
     "Labios",
-    500000,
-    50,
+    5000,
+    3750,
     [
       "assets/img/labios/labial-metalizado1.jfif",
       "assets/img/labios/labial-metalizado2.jfif",
