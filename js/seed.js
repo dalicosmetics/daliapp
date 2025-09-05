@@ -303,7 +303,7 @@ export const productosSeed = [
     [
       "assets/img/ojos/paleta-kyc1.jfif",
       "assets/img/ojos/paleta-kyc2.jfif",
-      "assets/img/ojos/paleta-kyc3.jfif",
+      "assets/img/ojos/ali-te-amo.jfif",
     ],
     "Una curación de 36 sombras altamente pigmentadas, que van desde los neutros cálidos y fríos para el día a día, hasta una explosión de colores neón y pastel que te permitirán crear looks audaces y creativos.",
     "nuevo"
