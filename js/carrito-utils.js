@@ -71,7 +71,7 @@ export function calcularTotal(carrito) {
   let cantidadTotal = carrito.reduce((acc, item) => acc + item.cantidad, 0);
 
   carrito.forEach(item => {
-    let precioUnitario = (cantidadTotal >= 5) ? item.precioMayorista : item.precioDetal;
+    let precioUnitario = (cantidadTotal >= 2) ? item.precioMayorista : item.precioDetal;
     total += item.cantidad * precioUnitario;
   });
 
