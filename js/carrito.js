@@ -24,7 +24,7 @@ function getPrecioUnitario(p) {
   if (p.precioDetal === undefined || p.precioMayor === undefined) {
     return p.precio;
   }
-  return p.cantidad >= 5 ? p.precioMayor : p.precioDetal;
+  return p.cantidad >= 2 ? p.precioMayor : p.precioDetal;
 }
 
 function renderCarrito() {
