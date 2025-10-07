@@ -192,6 +192,20 @@ export const productosSeed = [
     "nuevo"
   ),
   new Producto(
+    116,
+    "Labial Matte Cakaila",
+    "Labios",
+    5000,
+    2600,
+    [
+      "assets/img/labios/bi.jpeg",
+      "assets/img/labios/al.jpeg",
+      "assets/img/labios/la.jpeg",
+    ],
+    "Cada gloss es un pequeño tesoro, con destellos vibrantes y una elegante tapa en forma de corazón. Además de dejar tus labios con un acabado brillante y un sutil toque de color, tienen un aroma dulce y agradable. Su fórmula ligera no es pegajosa, lo que los hace ideales para uso diario.",
+    "nuevo"
+  ),
+  new Producto(
     200,
     "Brochas Cola de Sirena",
     "Ojos",
@@ -624,4 +638,5 @@ export const productosSeed = [
     "Hidrata y repara tu piel con el Sérum de Ácido Hialurónico + Vitamina B5 de BIOAQUA. Su fórmula concentrada calma la piel irritada, reduce la apariencia de los poros y proporciona una hidratación profunda para una barrera cutánea más fuerte y saludable.",
     "nuevo"
   ),
+
 ];
