@@ -202,20 +202,57 @@ export const productosSeed = [
       "assets/img/labios/al.jpeg",
       "assets/img/labios/la.jpeg",
     ],
-    "Cada gloss es un pequeño tesoro, con destellos vibrantes y una elegante tapa en forma de corazón. Además de dejar tus labios con un acabado brillante y un sutil toque de color, tienen un aroma dulce y agradable. Su fórmula ligera no es pegajosa, lo que los hace ideales para uso diario.",
+    "✨¡Desata tu poder con los labios!💄 Los labiales líquidos CAKAILA combinan color intenso, acabado mate y larga duración en una fórmula irresistible. ¡Seduce con cada palabra! 🔥",
     "nuevo"
   ),
   new Producto(
-    200,
-    "Brochas Cola de Sirena",
-    "Ojos",
-    12000,
-    8250,
+    117,
+    "Labial Matte Nude",
+    "Labios",
+    7000,
+    3900,
     [
-      "assets/img/ojos/brocha-sirena1.jfif",
-      "assets/img/ojos/brocha-sirena2.jfif",
+      "assets/img/labios/118-labial-nude-1.jfif",
+      "assets/img/labios/118-labial-nude-2.jfif",
     ],
-    "Crea looks de fantasía con nuestro Set de Brochas con Diseño de Sirena. Cada set de 10 brochas presenta un mango de cola de sirena en colores metálicos, ideal para aplicar y difuminar maquillaje en ojos y rostro. ¡Un toque mágico para tu colección de belleza!",
+    "💋 ¡Labios que impactan! 💄 Descubre los nuevos colores NUDE, acabado mate y ultra hidratación en cada aplicación. ¡Tu boca será el centro de todas las miradas! 🔥 Extrema duración",
+    "nuevo"
+  ),
+  new Producto(
+    118,
+    "Tinta Paleta",
+    "Labios",
+    6000,
+    3400,
+    [
+      "assets/img/labios/118-tinta-paleta.jfif",
+    ],
+    "🍭 ¡Dulces labios irresistibles! 💋 Nuestras tintas vienen en un adorable empaque de paleta, pero lo mejor está dentro: colores vibrantes, textura ligera y un brillo que enamora. ¡Atrévete a lucir labios de antojo! ✨",
+    "nuevo"
+  ),
+  new Producto(
+    119,
+    "Tinta Paleta",
+    "Labios",
+    6000,
+    3400,
+    [
+      "assets/img/labios/118-tinta-paleta.jfif",
+    ],
+    "🍭 ¡Dulces labios irresistibles! 💋 Nuestras tintas vienen en un adorable empaque de paleta, pero lo mejor está dentro: colores vibrantes, textura ligera y un brillo que enamora. ¡Atrévete a lucir labios de antojo! ✨",
+    "nuevo"
+  ),
+  new Producto(
+    120,
+    "Brillo Voluminizador Karite",
+    "Labios",
+    7500,
+    5900,
+    [
+      "assets/img/labios/120-brillo-voluminizador-karite-1.jfif",
+      "assets/img/labios/120-brillo-voluminizador-karite-2.jfif",
+    ],
+    "Este gloss es un voluminizador que da una sensación de volumen inmediata y un brillo espectacular. ¡Elige tu color favorito y listo!🩷",
     "nuevo"
   ),
   new Producto(
@@ -229,22 +266,6 @@ export const productosSeed = [
       "assets/img/ojos/delineador-garrita2.jfif",
     ],
     "¡Un delineado perfecto que dura 24 horas! Este Delineador Líquido a Prueba de Agua de ABZ te da una mirada dramática y definida con un solo trazo. Su punta de alta precisión y su fórmula de larga duración lo convierten en el aliado perfecto para un look impecable de día o de noche. ¡Y el empaque de gatito es irresistible!",
-    "nuevo"
-  ),
-  new Producto(
-    203,
-    "Brochas Deluxe",
-    "Ojos",
-    18900,
-    12500,
-    [
-      "assets/img/ojos/brochas-deluxe1.jfif",
-      "assets/img/ojos/brochas-deluxe2.jfif",
-      "assets/img/ojos/brochas-deluxe3.jfif",
-      "assets/img/ojos/brochas-deluxe4.jfif",
-      "assets/img/ojos/brochas-deluxe5.jfif",
-    ],
-    "Lleva tu maquillaje al siguiente nivel con este espectacular set. Los mangos llenos de glitter de cuatro colores espectaculares que se mueve y las cerdas súper suaves no solo hacen que la aplicación sea más fácil, sino también más divertida. El set incluye brochas para base, rubor, sombras y cejas, asegurando que tengas la herramienta perfecta para cada paso de tu maquillaje. ¡Es hora de añadir un poco de magia a tu colección!",
     "nuevo"
   ),
   new Producto(
@@ -336,19 +357,6 @@ export const productosSeed = [
     "nuevo"
   ),
   new Producto(
-    211,
-    "Perfiladores de cejas x3",
-    "Ojos",
-    3000,
-    1750,
-    [
-      "assets/img/ojos/perfilador-cejas1.jfif",
-      "assets/img/ojos/perfilador-cejas2.jfif",
-    ],
-    "Mantén tus cejas siempre perfectas esta herramienta es la solución ideal para el retoque diario, permitiéndote eliminar el exceso de vello y dar forma a tus cejas de manera fácil y sin irritaciones. Su hoja de alta calidad y diseño ergonómico garantizan un perfilado suave y un resultado profesional, justo como lo harías en un salón.",
-    "nuevo"
-  ),
-  new Producto(
     212,
     "Pestañina 7D",
     "Ojos",
@@ -430,6 +438,46 @@ export const productosSeed = [
     "nuevo"
   ),
   new Producto(
+    218,
+    "Pestañina Deluxe",
+    "Ojos",
+    7500,
+    4900,
+    [
+      "assets/img/ojos/218-pestaninas-deluxe1.jfif",
+      "assets/img/ojos/218-pestaninas-deluxe2.jfif",
+    ],
+    "👁️ Máscara de Pestañas Beauty Model – Alarga, da volumen y define cada pestaña para una mirada intensa y poderosa. ✨💥",
+    "nuevo"
+  ),
+  new Producto(
+    219,
+    "Delineador a Prueba de Agua",
+    "Ojos",
+    7000,
+    4100,
+    [
+      "assets/img/ojos/219-delineador-waterproof.jfif",
+    ],
+    "🖤 Delineador plumon – Súper negro, a prueba de agua y de larga duración. Ideal para trazos precisos que duran todo el día. ✍️✨",
+    "nuevo"
+  ),
+  new Producto(
+    221,
+    "Brochas Unicolor",
+    "Ojos",
+    8000,
+    6100,
+    [
+      "assets/img/ojos/221-brochas-unicolor-brillantes.jfif",
+      "assets/img/ojos/221-brochas-unicolor-brillantes1.jfif",
+      "assets/img/ojos/221-brochas-unicolor-brillantes2.jfif",
+      "assets/img/ojos/221-brochas-unicolor-brillantes3.jfif",
+    ],
+    "✨ Set de Brochas de Maquillaje – Incluye brochas suaves y precisas para aplicar base, rubor, sombras y más. Sus mangos ligeros y coloridos ofrecen un agarre cómodo, ideal para lograr un maquillaje perfecto. Perfectas para uso diario o profesional. 💖💄",
+    "nuevo"
+  ),
+  new Producto(
     300,
     "Base liquida My Melody en diferentes tonos.",
     "Rostro",
@@ -463,45 +511,6 @@ export const productosSeed = [
     3500,
     ["assets/img/rostro/base-stich1.jfif"],
     "Esta base líquida viene en un práctico tubo de tamaño pequeño, fácil de llevar a cualquier lugar. Su fórmula combina protección solar con un acabado natural para el día a día, aparte viene en diferentes tonos para todos los tipos de piel.",
-    "nuevo"
-  ),
-  new Producto(
-    303,
-    "Beauty Blender",
-    "Rostro",
-    3500,
-    1900,
-    [
-      "assets/img/rostro/beauty-blenderkawaii1.jfif",
-      "assets/img/rostro/beauty-blenderkawaii2.jfif",
-    ],
-    "Dale un toque divertido a tu rutina de maquillaje con estas adorables esponjas. Su material de alta calidad permite una aplicación suave y uniforme de bases, correctores y polvos. Úsalas en seco para una cobertura total o húmedas para un acabado natural y luminoso.",
-    "nuevo"
-  ),
-  new Producto(
-    304,
-    "Brocha maquillaje profesional",
-    "Rostro",
-    9000,
-    6500,
-    [
-      "assets/img/rostro/brocha-profesional1.jfif",
-      "assets/img/rostro/brocha-profesional2.jfif",
-    ],
-    "Consigue un acabado impecable con esta Brocha para Maquillaje de Acabado Profesional. Su diseño ergonómico y cerdas densas permiten una aplicación rápida y uniforme de base, polvos o contorno. Ideal para una cobertura sin esfuerzo",
-    "nuevo"
-  ),
-  new Producto(
-    305,
-    "Brochas unicolor",
-    "Rostro",
-    3500,
-    2750,
-    [
-      "assets/img/rostro/brocha-unicolor1.jfif",
-      "assets/img/rostro/brocha-unicolor2.jfif",
-    ],
-    "Lleva tu maquillaje al siguiente nivel con nuestro set de brochas en tonos pastel. Cada paquete incluye brochas esenciales para rostro y ojos, con cerdas suaves y un diseño adorable. Elige tu color favorito y crea looks increíbles de forma fácil y divertida.",
     "nuevo"
   ),
   new Producto(
@@ -596,6 +605,70 @@ export const productosSeed = [
     "nuevo"
   ),
   new Producto(
+    313,
+    "Polvos Banana",
+    "Rostro",
+    12500,
+    8900,
+    [
+      "assets/img/rostro/313-polvos-banana.jfif",
+      "assets/img/rostro/313-polvos-banana2.jfif",
+    ],
+    "🌟 Polvo Compacto Banana – Acabado suave y natural que matifica la piel al instante. Ideal para sellar el maquillaje y mantener tu rostro fresco y radiante. 🍌✨",
+    "nuevo"
+  ),
+  new Producto(
+    314,
+    "Polvos Kevin y Coco",
+    "Rostro",
+    10200,
+    14000,
+    [
+      "assets/img/rostro/314-polvos-kevin-y-coco.jfif",
+      "assets/img/rostro/314-polvos-kevin-y-coco2.jfif",
+    ],
+    "✨ Polvo Compacto Kevin&Coco – Suave, ligero y de larga duración. ¡Logra un acabado perfecto al instante y luce una piel radiante todo el día! 💁‍♀️🌟",
+    "nuevo"
+  ),
+  new Producto(
+    315,
+    "Iluminador en Roll On Iman of Noble",
+    "Rostro",
+    6000,
+    3000,
+    [
+      "assets/img/rostro/315-iluminador-rollon1.jfif",
+      "assets/img/rostro/315-iluminador-rollon2.jfif",
+    ],
+    "✨ Iluminador en Polvo en Rollon – Brillo mágico al instante. Ideal para resaltar mejillas, ojos y cuerpo con un acabado radiante. 💫🌟",
+    "nuevo"
+  ),
+  new Producto(
+    316,
+    "Rubor en crema Karite",
+    "Rostro",
+    8000,
+    5700,
+    [
+      "assets/img/rostro/316-rubor-crema-karite1.jfif",
+      "assets/img/rostro/316-rubor-crema-karite2.jfif",
+    ],
+    "💖 Rubor en Crema Karité – Textura suave tipo gel, fácil de difuminar y de larga duración. Disponible en 6 tonos para un toque natural y radiante. 🌸✨",
+    "nuevo"
+  ),
+  new Producto(
+    317,
+    "Beauty Blender Kiss Lovely",
+    "Rostro",
+    3900,
+    2900,
+    [
+      "assets/img/rostro/317-beauty-blender.jfif",
+    ],
+    "Beauty Blender 💖 Esponja de maquillaje que permite aplicar base, corrector o polvos de forma uniforme, logrando un acabado natural y sin marcas",
+    "nuevo"
+  ),
+  new Producto(
     400,
     "Mascarilla Facial de Pato de BIOAQUA",
     "Skincare",
@@ -636,6 +709,225 @@ export const productosSeed = [
     4000,
     ["assets/img/skincare/serum-b5.jfif"],
     "Hidrata y repara tu piel con el Sérum de Ácido Hialurónico + Vitamina B5 de BIOAQUA. Su fórmula concentrada calma la piel irritada, reduce la apariencia de los poros y proporciona una hidratación profunda para una barrera cutánea más fuerte y saludable.",
+    "nuevo"
+  ),
+  new Producto(
+    404,
+    "Serum Arroz BioAqua",
+    "Skincare",
+    8500,
+    5900,
+    [
+      "assets/img/skincare/404-serum-arroz-bioaqua.jfif",
+      "assets/img/skincare/404-serum-arroz-bioaqua2.jfif",
+    ],
+    "🌾 Sérum de Arroz Bioaqua – Formulado con extracto natural de arroz, ayuda a hidratar profundamente, mejorar la textura y aclarar el tono de la piel. Su fórmula ligera se absorbe fácilmente, dejando el rostro suave, luminoso y con un brillo saludable. Ideal para todo tipo de piel y uso diario. ✨💧",
+    "nuevo"
+  ),
+  new Producto(
+    405,
+    "Serum Antiacne BioAqua",
+    "Skincare",
+    6500,
+    4000,
+    [
+      "assets/img/skincare/405-serum-acne-bioaqua.jfif",
+      "assets/img/skincare/405-serum-acne-bioaqua2.jfif",
+    ],
+    "🌹 Jabón Facial de Rosa Bioaqua – Un limpiador suave que purifica profundamente la piel, eliminando impurezas, exceso de grasa y restos de maquillaje sin resecar. Gracias a su extracto natural de rosa, hidrata, refresca y mejora la luminosidad del rostro, dejándolo terso, suave y con un delicado aroma floral. Ideal para todo tipo de piel y perfecto para una rutina diaria de cuidado facial. ✨🫧",
+    "nuevo"
+  ),
+  new Producto(
+    406,
+    "Jabon Facial Rosas Bioaqua",
+    "Skincare",
+    8900,
+    6300,
+    [
+      "assets/img/skincare/406-jabon-facial-rosas-bioaqua.jfif",
+      "assets/img/skincare/406-jabon-facial-rosas-bioaqua2.jfif",
+    ],
+    "🌹 Jabón Facial de Rosa Bioaqua – Un limpiador suave que purifica profundamente la piel, eliminando impurezas, exceso de grasa y restos de maquillaje sin resecar. Gracias a su extracto natural de rosa, hidrata, refresca y mejora la luminosidad del rostro, dejándolo terso, suave y con un delicado aroma floral. Ideal para todo tipo de piel y perfecto para una rutina diaria de cuidado facial. ✨🫧",
+    "nuevo"
+  ),
+  new Producto(
+    407,
+    "Mascarilla de Colágeno para Ojos Bioaqua",
+    "Skincare",
+    3000,
+    1700,
+    [
+      "assets/img/skincare/407-mascarilla-colageno.jfif",
+    ],
+    "💛Refresca e hidrata profundamente el contorno de ojos, ayudando a reducir bolsas, ojeras y líneas de expresión. Su fórmula con colágeno reafirma y aporta luminosidad, dejando la piel más suave, tersa y revitalizada. Ideal para un efecto descansado y radiante. 👁️✨",
+    "nuevo"
+  ),
+  new Producto(
+    408,
+    "Mascarilla Facial Hidratante de Bioaqua",
+    "Skincare",
+    3000,
+    1700,
+    [
+      "assets/img/skincare/408-mascarilla-osito.jfif",
+    ],
+    "Formulada con esencia de plantas claras e hidratantes, esta divertida mascarilla tipo animalito ayuda a retener la humedad, refrescar y suavizar la piel. Ideal para revitalizar el rostro cansado, dejándolo más luminoso, hidratado y con una sensación de frescura inmediata. Perfecta para un momento de cuidado relajante y divertido. 💧🌿",
+    "nuevo"
+  ),
+  new Producto(
+    409,
+    "Mascarilla Facial Hidratante de Bioaqua",
+    "Skincare",
+    3000,
+    1700,
+    [
+      "assets/img/skincare/409-mascarilla-conejito.jfif",
+    ],
+    "🐰✨Disfruta de una piel suave, fresca y radiante con esta mascarilla hidratante de esencia de plantas. Su fórmula ayuda a hidratar profundamente, mejorar la elasticidad y dejar tu rostro luminoso. 🌸 Hidratación intensa 🌿 Extractos vegetales nutritivos 😍 Presentación divertida con diseño de conejito 💧 Ideal para todo tipo de piel.  Perfecta para consentirte y devolverle vitalidad a tu piel en minutos.",
+    "nuevo"
+  ),
+  new Producto(
+    410,
+    "Mascarilla Facial BioAqua con Nicotinamida",
+    "Skincare",
+    3000,
+    1700,
+    [
+      "assets/img/skincare/410-mascarilla-nicotanimide.jfif",
+      "assets/img/skincare/410-mascarilla-nicotanimide2.jfif",
+    ],
+    "✨ Mascarilla iluminadora que ayuda a reducir manchas y pecas, unifica el tono de la piel y mejora su luminosidad. Contiene 50% nicotinamida y extracto de levadura para reparar la barrera cutánea y darle un brillo saludable al rostro.",
+    "nuevo"
+  ),
+  new Producto(
+    411,
+    "Mascarilla Facial BIOAQUA con Vitamina C",
+    "Skincare",
+    3000,
+    1700,
+    [
+      "assets/img/skincare/411-mascarilla-vitaminac.jfif",
+    ],
+    "🍊 Mascarilla revitalizante que hidrata, ilumina y mejora la elasticidad de la piel. Su fórmula con vitamina C ayuda a unificar el tono, aportando un brillo natural y saludable al rostro.",
+    "nuevo"
+  ),
+  new Producto(
+    412,
+    "Mascarilla Facial BIOAQUA Retinol",
+    "Skincare",
+    3000,
+    1700,
+    [
+      "assets/img/skincare/412-mascarilla-retinol.jfif",
+    ],
+    "Enriquecida con 45% retinol y ácido hialurónico, ayuda a reducir arrugas, mejorar la elasticidad y aportar firmeza a la piel. ",
+    "nuevo"
+  ),
+  new Producto(
+    500,
+    "Par de Caimanes Hawaianos Pequeños",
+    "Accesorios",
+    5000,
+    5000,
+    [
+      "assets/img/accesorios/500-caiman-hawaiano-pequeno.jfif",
+    ],
+    "Pinzas Hawaianas para el Cabello 🌺Accesorio tropical y colorido que sujeta tu cabello con estilo y frescura. ",
+    "nuevo"
+  ),
+  new Producto(
+    501,
+    "Brochas Cola de Sirena",
+    "Accesorios",
+    12000,
+    8250,
+    [
+      "assets/img/ojos/brocha-sirena1.jfif",
+      "assets/img/ojos/brocha-sirena2.jfif",
+    ],
+    "Crea looks de fantasía con nuestro Set de Brochas con Diseño de Sirena. Cada set de 10 brochas presenta un mango de cola de sirena en colores metálicos, ideal para aplicar y difuminar maquillaje en ojos y rostro. ¡Un toque mágico para tu colección de belleza!",
+    "nuevo"
+  ),
+  new Producto(
+    502,
+    "Brochas Deluxe",
+    "Accesorios",
+    18900,
+    12500,
+    [
+      "assets/img/ojos/brochas-deluxe1.jfif",
+      "assets/img/ojos/brochas-deluxe2.jfif",
+      "assets/img/ojos/brochas-deluxe3.jfif",
+      "assets/img/ojos/brochas-deluxe4.jfif",
+      "assets/img/ojos/brochas-deluxe5.jfif",
+    ],
+    "Lleva tu maquillaje al siguiente nivel con este espectacular set. Los mangos llenos de glitter de cuatro colores espectaculares que se mueve y las cerdas súper suaves no solo hacen que la aplicación sea más fácil, sino también más divertida. El set incluye brochas para base, rubor, sombras y cejas, asegurando que tengas la herramienta perfecta para cada paso de tu maquillaje. ¡Es hora de añadir un poco de magia a tu colección!",
+    "nuevo"
+  ),
+  new Producto(
+    503,
+    "Perfiladores de cejas x3",
+    "Accesorios",
+    3000,
+    1750,
+    [
+      "assets/img/ojos/perfilador-cejas1.jfif",
+      "assets/img/ojos/perfilador-cejas2.jfif",
+    ],
+    "Mantén tus cejas siempre perfectas esta herramienta es la solución ideal para el retoque diario, permitiéndote eliminar el exceso de vello y dar forma a tus cejas de manera fácil y sin irritaciones. Su hoja de alta calidad y diseño ergonómico garantizan un perfilado suave y un resultado profesional, justo como lo harías en un salón.",
+    "nuevo"
+  ),
+  new Producto(
+    504,
+    "Beauty Blender",
+    "Accesorios",
+    3500,
+    1900,
+    [
+      "assets/img/rostro/beauty-blenderkawaii1.jfif",
+      "assets/img/rostro/beauty-blenderkawaii2.jfif",
+    ],
+    "Dale un toque divertido a tu rutina de maquillaje con estas adorables esponjas. Su material de alta calidad permite una aplicación suave y uniforme de bases, correctores y polvos. Úsalas en seco para una cobertura total o húmedas para un acabado natural y luminoso.",
+    "nuevo"
+  ),
+  new Producto(
+    505,
+    "Brocha maquillaje profesional",
+    "Accesorios",
+    9000,
+    6500,
+    [
+      "assets/img/rostro/brocha-profesional1.jfif",
+      "assets/img/rostro/brocha-profesional2.jfif",
+    ],
+    "Consigue un acabado impecable con esta Brocha para Maquillaje de Acabado Profesional. Su diseño ergonómico y cerdas densas permiten una aplicación rápida y uniforme de base, polvos o contorno. Ideal para una cobertura sin esfuerzo",
+    "nuevo"
+  ),
+  new Producto(
+    506,
+    "Brochas unicolor",
+    "Accesorios",
+    3500,
+    2750,
+    [
+      "assets/img/rostro/brocha-unicolor1.jfif",
+      "assets/img/rostro/brocha-unicolor2.jfif",
+    ],
+    "Lleva tu maquillaje al siguiente nivel con nuestro set de brochas en tonos pastel. Cada paquete incluye brochas esenciales para rostro y ojos, con cerdas suaves y un diseño adorable. Elige tu color favorito y crea looks increíbles de forma fácil y divertida.",
+    "nuevo"
+  ),
+  new Producto(
+    507,
+    "Encrespador",
+    "Accesorios",
+    7000,
+    3900,
+    [
+      "assets/img/ojos/220-encrespador2.jfif",
+      "assets/img/ojos/220-encrespador1.jfif",
+      "assets/img/ojos/220-encrespador3.jfif",
+    ],
+    "🔥 Encrespador de Pestañas – Levanta y curva tus pestañas al instante para una mirada más abierta y expresiva. 👁️✨",
     "nuevo"
   ),
 
