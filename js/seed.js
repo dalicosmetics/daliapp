@@ -336,24 +336,10 @@ export const productosSeed = [
     25900,
     19500,
     [
-      "assets/img/ojos/paleta-kyc1.jfif",
-      "assets/img/ojos/paleta-kyc2.jfif",
-      "assets/img/ojos/ali-te-amo.jfif",
+      "assets/img/ojos/paleta-librokyc1.jfif",
+      "assets/img/ojos/paleta-librokyc2.jfif",
     ],
     "Una curación de 36 sombras altamente pigmentadas, que van desde los neutros cálidos y fríos para el día a día, hasta una explosión de colores neón y pastel que te permitirán crear looks audaces y creativos.",
-    "nuevo"
-  ),
-  new Producto(
-    210,
-    "Paleta Mocmallure Nude",
-    "Ojos",
-    500000,
-    2000000,
-    [
-      "assets/img/ojos/sombra-nude1.jfif",
-      "assets/img/ojos/sombra-nude2.jfif",
-    ],
-    "Maximiza tu kit de maquillaje con esta paleta multifuncional todo en uno. 'Smart Eyes' no solo te da 15 tonos de sombras para crear cualquier look de ojos el empaque elegante y compacto es ideal para llevarlo contigo, asegurando que siempre tengas lo necesario para perfeccionar tu rostro. Los tonos versátiles, con acabados mates y satinados, son perfectos para un maquillaje sofisticado y sin esfuerzo.",
     "nuevo"
   ),
   new Producto(
