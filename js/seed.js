@@ -449,21 +449,6 @@ export const productosSeed = [
     "nuevo"
   ),
   new Producto(
-    221,
-    "Brochas Unicolor",
-    "Ojos",
-    8000,
-    6100,
-    [
-      "assets/img/ojos/221-brochas-unicolor-brillantes.jfif",
-      "assets/img/ojos/221-brochas-unicolor-brillantes1.jfif",
-      "assets/img/ojos/221-brochas-unicolor-brillantes2.jfif",
-      "assets/img/ojos/221-brochas-unicolor-brillantes3.jfif",
-    ],
-    "✨ Set de Brochas de Maquillaje – Incluye brochas suaves y precisas para aplicar base, rubor, sombras y más. Sus mangos ligeros y coloridos ofrecen un agarre cómodo, ideal para lograr un maquillaje perfecto. Perfectas para uso diario o profesional. 💖💄",
-    "nuevo"
-  ),
-  new Producto(
     300,
     "Base liquida My Melody en diferentes tonos.",
     "Rostro",
@@ -643,23 +628,11 @@ export const productosSeed = [
     "nuevo"
   ),
   new Producto(
-    317,
-    "Beauty Blender Kiss Lovely",
-    "Rostro",
-    3900,
-    2900,
-    [
-      "assets/img/rostro/317-beauty-blender.jfif",
-    ],
-    "Beauty Blender 💖 Esponja de maquillaje que permite aplicar base, corrector o polvos de forma uniforme, logrando un acabado natural y sin marcas",
-    "nuevo"
-  ),
-  new Producto(
     400,
     "Mascarilla Facial de Pato de BIOAQUA",
     "Skincare",
-    2000,
-    1500,
+    3000,
+    1700,
     ["assets/img/skincare/mascarilla-pollo.jfif"],
     "Dale a tu piel un impulso de hidratación con esta divertida mascarilla facial. Su diseño adorable y su fórmula nutritiva trabajan juntos para dejar la piel suave y radiante. Perfecta para una sesión de cuidado personal en casa, esta mascarilla ayuda a rejuvenecer la piel y a darle un aspecto fresco y saludable.",
     "nuevo"
@@ -848,7 +821,7 @@ export const productosSeed = [
       "assets/img/ojos/brochas-deluxe5.jfif",
     ],
     "Lleva tu maquillaje al siguiente nivel con este espectacular set. Los mangos llenos de glitter de cuatro colores espectaculares que se mueve y las cerdas súper suaves no solo hacen que la aplicación sea más fácil, sino también más divertida. El set incluye brochas para base, rubor, sombras y cejas, asegurando que tengas la herramienta perfecta para cada paso de tu maquillaje. ¡Es hora de añadir un poco de magia a tu colección!",
-    "nuevo"
+    "ultimos"
   ),
   new Producto(
     503,
@@ -861,7 +834,7 @@ export const productosSeed = [
       "assets/img/ojos/perfilador-cejas2.jfif",
     ],
     "Mantén tus cejas siempre perfectas esta herramienta es la solución ideal para el retoque diario, permitiéndote eliminar el exceso de vello y dar forma a tus cejas de manera fácil y sin irritaciones. Su hoja de alta calidad y diseño ergonómico garantizan un perfilado suave y un resultado profesional, justo como lo harías en un salón.",
-    "nuevo"
+    "ultimos"
   ),
   new Producto(
     504,
@@ -874,7 +847,7 @@ export const productosSeed = [
       "assets/img/rostro/beauty-blenderkawaii2.jfif",
     ],
     "Dale un toque divertido a tu rutina de maquillaje con estas adorables esponjas. Su material de alta calidad permite una aplicación suave y uniforme de bases, correctores y polvos. Úsalas en seco para una cobertura total o húmedas para un acabado natural y luminoso.",
-    "nuevo"
+    "ultimos"
   ),
   new Producto(
     505,
@@ -887,7 +860,7 @@ export const productosSeed = [
       "assets/img/rostro/brocha-profesional2.jfif",
     ],
     "Consigue un acabado impecable con esta Brocha para Maquillaje de Acabado Profesional. Su diseño ergonómico y cerdas densas permiten una aplicación rápida y uniforme de base, polvos o contorno. Ideal para una cobertura sin esfuerzo",
-    "nuevo"
+    "ultimos"
   ),
   new Producto(
     506,
@@ -914,6 +887,33 @@ export const productosSeed = [
       "assets/img/ojos/220-encrespador3.jfif",
     ],
     "🔥 Encrespador de Pestañas – Levanta y curva tus pestañas al instante para una mirada más abierta y expresiva. 👁️✨",
+    "nuevo"
+  ),
+  new Producto(
+    508,
+    "Beauty Blender Kiss Lovely",
+    "Accesorios",
+    3900,
+    2900,
+    [
+      "assets/img/rostro/317-beauty-blender.jfif",
+    ],
+    "Beauty Blender 💖 Esponja de maquillaje que permite aplicar base, corrector o polvos de forma uniforme, logrando un acabado natural y sin marcas",
+    "nuevo"
+  ),
+  new Producto(
+    509,
+    "Brochas Unicolor",
+    "Accesorios",
+    8000,
+    6100,
+    [
+      "assets/img/ojos/221-brochas-unicolor-brillantes.jfif",
+      "assets/img/ojos/221-brochas-unicolor-brillantes1.jfif",
+      "assets/img/ojos/221-brochas-unicolor-brillantes2.jfif",
+      "assets/img/ojos/221-brochas-unicolor-brillantes3.jfif",
+    ],
+    "✨ Set de Brochas de Maquillaje – Incluye brochas suaves y precisas para aplicar base, rubor, sombras y más. Sus mangos ligeros y coloridos ofrecen un agarre cómodo, ideal para lograr un maquillaje perfecto. Perfectas para uso diario o profesional. 💖💄",
     "nuevo"
   ),
 
