@@ -229,11 +229,16 @@ h2{color:var(--secondary);letter-spacing:.3px;margin:1rem 0 1.25rem}
 /* 🌸 Grid de productos */
 #lista-productos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* PC: 3 columnas */
   gap: 25px;
   padding: 20px;
 }
 
+@media (max-width: 900px) {
+  #lista-productos {
+    grid-template-columns: repeat(2, 1fr); /* Tablets y móviles grandes */
+  }
+}
 /* 🌸 Tarjeta */
 .producto-card {
   background: linear-gradient(145deg, #fff0f6, #ffe6f0); /* degrade rosadito */
@@ -2060,4 +2065,27 @@ textarea.form-control {
   transform: scale(1.05);
   background: linear-gradient(135deg, #ff80bf, #ff3385);
   box-shadow: 0 6px 16px rgba(255, 20, 147, 0.5);
+}
+
+
+
+/* NUEVA PAGINACION */
+#paginacion {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#paginacion button {
+  margin: 0 4px;
+  padding: 6px 12px;
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#paginacion button.activo {
+  background-color: #333;
+  color: white;
+  font-weight: bold;
 }
