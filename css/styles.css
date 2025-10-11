@@ -301,7 +301,7 @@ h2{color:var(--secondary);letter-spacing:.3px;margin:1rem 0 1.25rem}
   font-weight: 700;
   color: #d63384;
   margin: 15px 12px 5px;
-  font-family: "Comic Neue", "Poppins", cursive;
+  font-family: "Comic Neue", "Poppins", "National Park",system-ui;
 }
 
 .producto-card .categoria {
