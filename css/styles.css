@@ -229,16 +229,11 @@ h2{color:var(--secondary);letter-spacing:.3px;margin:1rem 0 1.25rem}
 /* 🌸 Grid de productos */
 #lista-productos {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* PC: 3 columnas */
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 25px;
   padding: 20px;
 }
 
-@media (max-width: 900px) {
-  #lista-productos {
-    grid-template-columns: repeat(2, 1fr); /* Tablets y móviles grandes */
-  }
-}
 /* 🌸 Tarjeta */
 .producto-card {
   background: linear-gradient(145deg, #fff0f6, #ffe6f0); /* degrade rosadito */
@@ -301,7 +296,7 @@ h2{color:var(--secondary);letter-spacing:.3px;margin:1rem 0 1.25rem}
   font-weight: 700;
   color: #d63384;
   margin: 15px 12px 5px;
-  font-family: "Comic Neue", "Poppins", "National Park",system-ui;
+  font-family: "Comic Neue", "Poppins", cursive;
 }
 
 .producto-card .categoria {
@@ -2065,51 +2060,4 @@ textarea.form-control {
   transform: scale(1.05);
   background: linear-gradient(135deg, #ff80bf, #ff3385);
   box-shadow: 0 6px 16px rgba(255, 20, 147, 0.5);
-}
-
-
-¡Absolutamente! 🎀 Vamos a transformar esa paginación en algo ultra mega girly y rosadita. Usaré tonos de rosa, brillos sutiles y bordes redondeados para darle ese toque fabuloso que buscas.
-
-Aquí tienes el código CSS modificado:
-
-CSS
-
-/* PAGINACIÓN ULTRA MEGA GIRLY ROSADITA */
-#paginacion {
-  text-align: center;
-  margin-top: 25px; /* Un poco más de espacio */
-}
-
-#paginacion button {
-  margin: 0 6px; /* Más espacio entre botones */
-  padding: 8px 16px; /* Botones más grandes y cómodos */
-  
-  /* Colores y estilo base */
-  background-color: #FCE4EC; /* Rosa pastel muy clarito */
-  color: #C2185B; /* Rosa oscuro vibrante para el texto */
-  border: 2px solid #FF80AB; /* Borde rosa brillante */
-  cursor: pointer;
-  border-radius: 20px; /* ¡Ultra redondeado! */
-  transition: all 0.3s ease; /* Transición suave para el hover */
-  
-  /* Sombra sutil para un efecto "pop" */
-  box-shadow: 0 2px 4px rgba(255, 105, 180, 0.4); /* Sombra rosada */
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-
-#paginacion button:hover {
-  background-color: #FFC0CB; /* Rosa chicle en hover */
-  transform: translateY(-2px); /* Pequeño levantamiento en hover */
-  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.6); /* Sombra más intensa */
-}
-
-#paginacion button.activo {
-  background-color: #E91E63; /* Rosa intenso, ¡el color principal! */
-  color: white; /* Texto blanco para destacar */
-  border-color: #880E4F; /* Borde más oscuro para contraste */
-  font-weight: bold;
-  
-  /* Efecto de brillo extra para el botón activo */
-  box-shadow: 0 0 10px rgba(233, 30, 99, 0.8), 0 0 20px rgba(233, 30, 99, 0.4);
 }

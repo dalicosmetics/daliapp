@@ -12,19 +12,12 @@ const catalogoSection = document.getElementById("catalogo-section");
 const btnCatalogo = document.getElementById("btn-catalogo");
 const categorias = document.querySelector(".subnav-links");
 const categoriasItems = document.querySelectorAll(".subnav-links a");
-let paginaActual = 1;
-const productosPorPagina = 8;
-let productosFiltradosGlobal = productosSeed; // se actualiza con filtros/búsquedas
 
 function renderProductos(productos) {
   const lista = document.getElementById("lista-productos");
   lista.innerHTML = "";
 
-  const inicio = (paginaActual - 1) * productosPorPagina;
-  const fin = inicio + productosPorPagina;
-  const productosPagina = productos.slice(inicio, fin);
-
-  productosPagina.forEach(p => {
+  productos.forEach(p => {
     let etiqueta = "";
     let claseEstado = "";
     let botonDisabled = "";
@@ -48,6 +41,7 @@ function renderProductos(productos) {
         etiqueta = "";
     }
 
+    // 🆕 HTML actualizado: imagen y nombre ahora son links
     lista.innerHTML += `
       <div class="producto-card ${claseEstado}">
         <div class="imagen-container">
@@ -76,6 +70,8 @@ function renderProductos(productos) {
           <button class="mas" data-id="${p.id}">+</button>
         </div>
 
+        <!-- ❌ Botón de detalles eliminado -->
+        
         <button class="btn agregar" data-id="${p.id}" ${botonDisabled}> 
           ${p.estado === "agotado" ? "No disponible" : "Agregar al carrito"}
         </button>
@@ -83,11 +79,28 @@ function renderProductos(productos) {
     `;
   });
 
-  prepararBotonesAgregar();
-  prepararCantidadBotones();
-  renderPaginacion(productos);
-}
+  // Eventos de cantidad (se mantienen igual)
+  document.querySelectorAll(".mas").forEach(btn => {
+    btn.addEventListener("click", e => {
+      const input = e.target.parentElement.querySelector(".cantidad");
+      input.value = parseInt(input.value) + 1;
+      actualizarCantidad(input.dataset.id, input.value);
+    });
+  });
 
+  document.querySelectorAll(".menos").forEach(btn => {
+    btn.addEventListener("click", e => {
+      const input = e.target.parentElement.querySelector(".cantidad");
+      if (parseInt(input.value) > 1) {
+        input.value = parseInt(input.value) - 1;
+        actualizarCantidad(input.dataset.id, input.value);
+      }
+    });
+  });
+
+  // Eventos agregar al carrito
+  prepararBotonesAgregar();
+}
 // -----------------------------
 // 🔹 Eventos de "Agregar al carrito"
 // -----------------------------
@@ -138,11 +151,12 @@ function aplicarFiltros() {
   let productosFiltrados = productosSeed.filter(p => {
     const filtroNombre = p.nombre.toLowerCase().includes(texto);
     const filtroCategoria = categoriaActiva === "todos" || p.categoria === categoriaActiva;
-
+  
+    // Comentamos estas líneas si no queremos que aparezcan "DaliBox" y "Promociones"
     if (categoriaActiva === "x" || categoriaActiva === "x") {
-      return false;
+      return false; // No devolver nada si la categoría es DaliBox o Promociones
     }
-
+  
     return filtroNombre && filtroCategoria;
   });
 
@@ -152,9 +166,6 @@ function aplicarFiltros() {
     productosFiltrados.sort((a, b) => b.precioDetal - a.precioDetal);
   }
 
-  // Reiniciar paginación
-  paginaActual = 1;
-  productosFiltradosGlobal = productosFiltrados;
   renderProductos(productosFiltrados);
 }
 
@@ -252,88 +263,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-const btnPaso1 = document.getElementById("btn-paso1");
-
-btnPaso1?.addEventListener("click", (e) => {
-  e.preventDefault();
-  catalogoSection.style.display = "block";
-  catalogoSection.scrollIntoView({ behavior: "smooth" });
-
-  document.querySelector(".subnav-links .activo")?.classList.remove("activo");
-  btnCatalogo.classList.add("activo"); // Aquí puedes dejar btnCatalogo como referencia visual
-
-  aplicarFiltros();
-});
-
-function renderPaginacion(productos) {
-  const paginacion = document.getElementById("paginacion");
-  paginacion.innerHTML = "";
-
-  const totalPaginas = Math.ceil(productos.length / productosPorPagina);
-  if (totalPaginas <= 1) return; // No mostrar si solo hay una página
-
-  // Anterior
-  if (paginaActual > 1) {
-    const btnAnterior = document.createElement("button");
-    btnAnterior.textContent = "« Anterior";
-    btnAnterior.addEventListener("click", () => {
-      paginaActual--;
-      renderProductos(productosFiltradosGlobal);
-      catalogoSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-    paginacion.appendChild(btnAnterior);
-  }
-
-  // Números
-  for (let i = 1; i <= totalPaginas; i++) {
-    const btn = document.createElement("button");
-    btn.textContent = i;
-    if (i === paginaActual) btn.classList.add("activo");
-    btn.addEventListener("click", () => {
-      paginaActual = i;
-      renderProductos(productosFiltradosGlobal);
-      catalogoSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-    paginacion.appendChild(btn);
-  }
-
-  // Siguiente
-  if (paginaActual < totalPaginas) {
-    const btnSiguiente = document.createElement("button");
-    btnSiguiente.textContent = "Siguiente »";
-    btnSiguiente.addEventListener("click", () => {
-      paginaActual++;
-      renderProductos(productosFiltradosGlobal);
-    });
-    paginacion.appendChild(btnSiguiente);
-  }
-}
-
-function prepararCantidadBotones() {
-  document.querySelectorAll(".mas").forEach(btn => {
-    btn.addEventListener("click", e => {
-      const input = e.target.parentElement.querySelector(".cantidad");
-      input.value = parseInt(input.value) + 1;
-      actualizarCantidad(input.dataset.id, input.value);
-    });
-  });
-
-  document.querySelectorAll(".menos").forEach(btn => {
-    btn.addEventListener("click", e => {
-      const input = e.target.parentElement.querySelector(".cantidad");
-      if (parseInt(input.value) > 1) {
-        input.value = parseInt(input.value) - 1;
-        actualizarCantidad(input.dataset.id, input.value);
-      }
-    });
-  });
-}
-
 // -----------------------------
 // 🔹 Render inicial
 // -----------------------------
-productosFiltradosGlobal = productosSeed;
-renderProductos(productosFiltradosGlobal);
+renderProductos(productosSeed);
 actualizarCarritoEmergente();
 
 
