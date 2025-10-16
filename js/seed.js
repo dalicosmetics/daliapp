@@ -694,8 +694,9 @@ export const productosSeed = [
     314,
     "Polvos Kevin y Coco",
     "Rostro",
-    10200,
     14000,
+    10200,
+    
     [
       "assets/img/rostro/314-polvos-kevin-y-coco.jfif",
       "assets/img/rostro/314-polvos-kevin-y-coco2.jfif",
