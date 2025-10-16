@@ -1071,9 +1071,18 @@ export const productosSeed = [
     "nuevo"
   ),
 
-
-
-
+  new Producto(
+    511,
+    "Bolsas Tornasol",
+    "Accesorios",
+    500,
+    200,
+    [
+      "assets/img/accesorios/511-bolsas-tornasol.jfif",
+    ],
+    " 💅 Colección exclusiva de uñas postizas . Diseños variados y a la moda. ¡Ponte chic en minutos!",
+    "nuevo"
+  ),
 
 
 ];
