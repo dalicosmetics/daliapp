@@ -182,9 +182,11 @@ export const productosSeed = [
     115,
     "Gloss Stich",
     "Labios",
-    5500,
-    3500,
+    6000,
+    4200,
     [
+      "assets/img/labios/gloss-stich4.jfif",
+      "assets/img/labios/gloss-stich3.jfif",
       "assets/img/labios/gloss-stich1.jfif",
       "assets/img/labios/gloss-stich2.jfif",
     ],
@@ -232,18 +234,6 @@ export const productosSeed = [
   ),
   new Producto(
     119,
-    "Tinta Paleta",
-    "Labios",
-    6000,
-    3400,
-    [
-      "assets/img/labios/118-tinta-paleta.jfif",
-    ],
-    "🍭 ¡Dulces labios irresistibles! 💋 Nuestras tintas vienen en un adorable empaque de paleta, pero lo mejor está dentro: colores vibrantes, textura ligera y un brillo que enamora. ¡Atrévete a lucir labios de antojo! ✨",
-    "nuevo"
-  ),
-  new Producto(
-    120,
     "Brillo Voluminizador Karite",
     "Labios",
     7500,
@@ -253,6 +243,72 @@ export const productosSeed = [
       "assets/img/labios/120-brillo-voluminizador-karite-2.jfif",
     ],
     "Este gloss es un voluminizador que da una sensación de volumen inmediata y un brillo espectacular. ¡Elige tu color favorito y listo!🩷",
+    "nuevo"
+  ),
+  new Producto(
+    120,
+    "Gloss Llavero",
+    "Labios",
+    12600,
+    8900,
+    [
+      "assets/img/labios/120-glos-llavero.jfif",
+      "assets/img/labios/120-glos-llavero2.jfif",
+    ],
+    "¡Doble de brillo, doble de encanto! Labios voluminosos con efecto hidratante y un accesorio súper cute en cada empaque. 🎀 ¡El regalo perfecto! 🎁",
+    "nuevo"
+  ),
+  new Producto(
+    121,
+    "Labial Karite",
+    "Labios",
+    7000,
+    4200,
+    [
+      "assets/img/labios/121-labial-karite.jfif",
+      "assets/img/labios/121-labial-karite2.jfif",
+      "assets/img/labios/121-labial-karite3.jfif",
+    ],
+    "🌟 Karité Lipstick 💄 COLOR STAY que no te abandona. Larga duración 24H y ¡a prueba de agua! 💦 Textura suave y no pegajosa. 💋 . ¡El labial que necesitas! ❤️",
+    "nuevo"
+  ),
+  new Producto(
+    122,
+    "Voluminizador Karite Brillos",
+    "Labios",
+    5200,
+    3700,
+    [
+      "assets/img/labios/122-voluminizador-karite-brillos.jfif",
+      "assets/img/labios/122-voluminizador-karite-brillos2.jfif",
+    ],
+    "💦💎 ¡Labios de cristal! Karité® Make Shimmer Lipgloss 🧡. Su poder de voluminizador te da un efecto jugoso y lleno de volumen. Colores que cambian con la luz gracias a su shimmer iridiscente. ¡Atrévete a brillar! ✨👄",
+    "nuevo"
+  ),
+  new Producto(
+    123,
+    "Gloss Lip Oil Corazon",
+    "Labios",
+    6000,
+    4200,
+    [
+      "assets/img/labios/123-Gloss-Lip-Oil-Corazon.jfif",
+      "assets/img/labios/123-Gloss-Lip-Oil-Corazon2.jfif",
+    ],
+    "💖💧 ¡Labios hidratados y con glow! Lip Oil/Gloss Transparente con un toque de color y un envase adorable. Fórmula ligera con efecto jugoso 💦. Aplicador y tapa con diseño ¡El secreto para unos labios suaves y brillantes! ✨",
+    "nuevo"
+  ),
+  new Producto(
+    124,
+    "Gloss Lip Oil Kuromi",
+    "Labios",
+    6000,
+    4200,
+    [
+      "assets/img/labios/124-Gloss-Lip-Oil-Kuromi2.jfif",
+      "assets/img/labios/124-Gloss-Lip-Oil-Kuromi.jfif",
+    ],
+    "¡El brillo labial que necesitas para un look kawaii con toque rocker! 💜 Este Lip Gloss de Kuromi te da un color rosa intenso y vibrante con un efecto WOW de glitter holográfico. ✨ Su fórmula es súper hidratante y cero pegajosa. ¡No solo es un labial, es un accesorio! 🎀",
     "nuevo"
   ),
   new Producto(
@@ -449,6 +505,19 @@ export const productosSeed = [
     "nuevo"
   ),
   new Producto(
+    220,
+    "Lapiz Para Cejas Karite",
+    "Ojos",
+    3500,
+    2200,
+    [
+      "assets/img/ojos/220-lapiz-cejas-karite.jfif",
+      "assets/img/ojos/220-lapiz-cejas-karite2.jfif",
+    ],
+    "💖✍️ ¡Cejas perfectas todo el día!  🤩. Lápiz con color y cepillo para un acabado natural. Fórmula Waterproof & Long Lasting 💧. Easy to shape use para unas cejas definidas y naturales.",
+    "nuevo"
+  ),
+  new Producto(
     300,
     "Base liquida My Melody en diferentes tonos.",
     "Rostro",
@@ -482,6 +551,39 @@ export const productosSeed = [
     3500,
     ["assets/img/rostro/base-stich1.jfif"],
     "Esta base líquida viene en un práctico tubo de tamaño pequeño, fácil de llevar a cualquier lugar. Su fórmula combina protección solar con un acabado natural para el día a día, aparte viene en diferentes tonos para todos los tipos de piel.",
+    "nuevo"
+  ),
+  new Producto(
+    303,
+    "Base liquida Capibara",
+    "Rostro",
+    5000,
+    3500,
+    ["assets/img/rostro/303-base-capibara2.jfif",
+    "assets/img/rostro/303-base-capibara.jfif"],
+    "🐻✨ ¡La base más adorable ha llegado! diseño súper tierno de capibara 🎀. No solo te da un look impecable, sino también protección solar alta ☀️🛡️. Cobertura perfecta y cuidado en un solo tubo de 40ml 🧴! 💖",
+    "nuevo"
+  ),
+  new Producto(
+    304,
+    "Base liquida Kitty",
+    "Rostro",
+    5000,
+    3500,
+    ["assets/img/rostro/304-base-kitty2.jfif",
+    "assets/img/rostro/304-base-kitty.jfif"],
+    "☀️🏖️ ¡Lista para el sol con estilo! Una base de maquillaje que actúa como protector solar de alta protección al mismo tiempo. 🎀  ¡Dile sí al glow saludable! 😉",
+    "nuevo"
+  ),
+  new Producto(
+    305,
+    "Corrector Osito",
+    "Rostro",
+    8000,
+    4400,
+    ["assets/img/rostro/305-corrector-osito.jfif",
+    "assets/img/rostro/305-corrector-osito2.jfif"],
+    "¡El producto que no puede faltar en tu tienda! Este adorable corrector labial combina hidratación de calidad con el diseño viral más buscado en redes sociales. Atrae clientes con su envase coleccionable y su precio irresistible.",
     "nuevo"
   ),
   new Producto(
@@ -628,36 +730,28 @@ export const productosSeed = [
     "nuevo"
   ),
   new Producto(
-    400,
-    "Mascarilla Facial de Pato de BIOAQUA",
-    "Skincare",
-    3000,
-    1700,
-    ["assets/img/skincare/mascarilla-pollo.jfif"],
-    "Dale a tu piel un impulso de hidratación con esta divertida mascarilla facial. Su diseño adorable y su fórmula nutritiva trabajan juntos para dejar la piel suave y radiante. Perfecta para una sesión de cuidado personal en casa, esta mascarilla ayuda a rejuvenecer la piel y a darle un aspecto fresco y saludable.",
-    "nuevo"
-  ),
-  new Producto(
-    401,
-    "Primer Aguacate",
-    "Skincare",
-    5000,
-    3000,
-    ["assets/img/skincare/primer-aguacate1.jfif"],
-    "Este primer facial de aguacate de Micolor es el primer paso para un maquillaje de larga duración. Su fórmula ligera y nutritiva ilumina y suaviza la piel, creando una base perfecta para la aplicación de la base. Ayuda a difuminar los poros y las líneas finas, asegurando un acabado liso y uniforme que se mantiene fresco durante todo el día.",
-    "nuevo"
-  ),
-  new Producto(
-    402,
-    "Primer Milk",
-    "Skincare",
-    5000,
-    3500,
+    317,
+    "Contorno 2 en 1 en Crema",
+    "Rostro",
+    7000,
+    3900,
     [
-      "assets/img/skincare/primer-milk1.jfif",
-      "assets/img/skincare/primer-milk2.jfif",
+      "assets/img/rostro/317-contorno-2-en-1-1.jfif",
+      "assets/img/rostro/317-contorno-2-en-1-4.jfif",
+      "assets/img/rostro/317-contorno-2-en-1-2.jfif",
+      "assets/img/rostro/317-contorno-2-en-1-3.jfif",
     ],
-    "Prepara tu piel para un maquillaje impecable con el primer facial su fórmula ligera y nutritiva alisa la textura de la piel, minimiza la apariencia de los poros y crea una superficie perfecta para la aplicación de la base. Este primer asegura que tu maquillaje se mantenga fresco y en su lugar durante horas. Es la elección ideal para un acabado profesional y de larga duración.",
+    "🎨✨ ¡Magia en un solo lápiz! Este producto de doble punta para un contorno perfecto. 🤎 El tono oscuro define y el tono claro ilumina y resalta. Un must-have para esculpir tu rostro con facilidad. ¡Efecto 3D al instante! 🌟",
+    "nuevo"
+  ),
+  new Producto(
+    400,
+    "Serum Acido Hialuronico",
+    "Skincare",
+    6500,
+    4000,
+    ["assets/img/skincare/400-serum-blanqueador-antimanchas.jfif"],
+    "✨💧 BIOAQUA Serum Blanqueador 🤍. Este es el Suero Esencia Blanqueadora y Despigmentante ideal para tratar las manchas y conseguir un tono de piel uniforme. Fórmula concentrada para una piel más clara y radiante. ¡Tu aliado contra las imperfecciones! 🌟.",
     "nuevo"
   ),
   new Producto(
@@ -780,6 +874,52 @@ export const productosSeed = [
       "assets/img/skincare/412-mascarilla-retinol.jfif",
     ],
     "Enriquecida con 45% retinol y ácido hialurónico, ayuda a reducir arrugas, mejorar la elasticidad y aportar firmeza a la piel. ",
+    "nuevo"
+  ),
+  new Producto(
+    413,
+    "Mascarilla Facial de Pato de BIOAQUA",
+    "Skincare",
+    3000,
+    1700,
+    ["assets/img/skincare/mascarilla-pollo.jfif"],
+    "Dale a tu piel un impulso de hidratación con esta divertida mascarilla facial. Su diseño adorable y su fórmula nutritiva trabajan juntos para dejar la piel suave y radiante. Perfecta para una sesión de cuidado personal en casa, esta mascarilla ayuda a rejuvenecer la piel y a darle un aspecto fresco y saludable.",
+    "nuevo"
+  ),
+  new Producto(
+    430,
+    "Primer Aguacate",
+    "Skincare",
+    5000,
+    3000,
+    ["assets/img/skincare/primer-aguacate1.jfif"],
+    "Este primer facial de aguacate de Micolor es el primer paso para un maquillaje de larga duración. Su fórmula ligera y nutritiva ilumina y suaviza la piel, creando una base perfecta para la aplicación de la base. Ayuda a difuminar los poros y las líneas finas, asegurando un acabado liso y uniforme que se mantiene fresco durante todo el día.",
+    "nuevo"
+  ),
+  new Producto(
+    431,
+    "Primer Milk",
+    "Skincare",
+    5000,
+    3500,
+    [
+      "assets/img/skincare/primer-milk1.jfif",
+      "assets/img/skincare/primer-milk2.jfif",
+    ],
+    "Prepara tu piel para un maquillaje impecable con el primer facial su fórmula ligera y nutritiva alisa la textura de la piel, minimiza la apariencia de los poros y crea una superficie perfecta para la aplicación de la base. Este primer asegura que tu maquillaje se mantenga fresco y en su lugar durante horas. Es la elección ideal para un acabado profesional y de larga duración.",
+    "nuevo"
+  ),
+  new Producto(
+    432,
+    "Primer Kuromi",
+    "Skincare",
+    5000,
+    3000,
+    [
+      "assets/img/skincare/432-primer-kuromi2.jfif",
+      "assets/img/skincare/432-primer-kuromi.jfif",
+    ],
+    "✨💜  Primer 3D de Mocallure®! 🦇 La base perfecta para tu maquillaje. Consigue una fijación Super Stay 💧 y una duración de ¡24 horas! ⏰ Prepara tu piel con el primer más cute y rebelde. ¡Ideal para exhibir en el display de 24 piezas!",
     "nuevo"
   ),
   new Producto(
@@ -916,5 +1056,24 @@ export const productosSeed = [
     "✨ Set de Brochas de Maquillaje – Incluye brochas suaves y precisas para aplicar base, rubor, sombras y más. Sus mangos ligeros y coloridos ofrecen un agarre cómodo, ideal para lograr un maquillaje perfecto. Perfectas para uso diario o profesional. 💖💄",
     "nuevo"
   ),
+  new Producto(
+    510,
+    "Uñas Postizas",
+    "Accesorios",
+    6000,
+    4800,
+    [
+      "assets/img/accesorios/508-unas-postizas3.jfif",
+      "assets/img/accesorios/508-unas-postizas2.jfif",
+      "assets/img/accesorios/508-unas-postizas.jfif",
+    ],
+    " 💅 Colección exclusiva de uñas postizas . Diseños variados y a la moda. ¡Ponte chic en minutos!",
+    "nuevo"
+  ),
+
+
+
+
+
 
 ];
