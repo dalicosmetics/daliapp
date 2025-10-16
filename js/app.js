@@ -13,7 +13,7 @@ const btnCatalogo = document.getElementById("btn-catalogo");
 const categorias = document.querySelector(".subnav-links");
 const categoriasItems = document.querySelectorAll(".subnav-links a");
 let paginaActual = 1;
-const productosPorPagina = 9;
+const productosPorPagina = 8;
 let productosFiltradosGlobal = productosSeed; // se actualiza con filtros/búsquedas
 
 function renderProductos(productos) {
