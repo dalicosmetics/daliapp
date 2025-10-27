@@ -969,7 +969,7 @@ export const productosSeed = [
     "Perfiladores de cejas x3",
     "Accesorios",
     3000,
-    1750,
+    1900,
     [
       "assets/img/ojos/perfilador-cejas1.jfif",
       "assets/img/ojos/perfilador-cejas2.jfif",
@@ -1076,8 +1076,8 @@ export const productosSeed = [
     511,
     "Bolsas Tornasol",
     "Accesorios",
+    1000,
     500,
-    200,
     [
       "assets/img/accesorios/511-bolsas-tornasol.jfif",
     ],
