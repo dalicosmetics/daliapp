@@ -1,10 +1,29 @@
 // ================================
-// app.js (versión adaptada con modal de confirmación)
+// app.js (versión adaptada con modal de confirmación + login integrado)
 // ================================
 
 import { productosSeed } from "./seed.js";
 
-// Referencias al DOM
+// ==========================================
+// 🔐 DETECCIÓN DE SESIÓN (LOGIN SIMPLE)
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+  const sesionActiva = localStorage.getItem("sesionActiva");
+
+  if (!sesionActiva) {
+    // Si no hay sesión, mostrar versión pública
+    document.body.classList.add("modo-visitante");
+    console.log("👤 Modo visitante activo");
+  } else {
+    // Si hay sesión, activar modo admin
+    document.body.classList.add("modo-admin");
+    console.log("🔑 Sesión activa (modo admin)");
+  }
+});
+
+// ==========================================
+// 🔹 REFERENCIAS AL DOM
+// ==========================================
 const lista = document.getElementById("lista-productos");
 const buscador = document.getElementById("buscador");
 const ordenPrecio = document.getElementById("orden-precio");
@@ -16,6 +35,9 @@ let paginaActual = 1;
 const productosPorPagina = 9;
 let productosFiltradosGlobal = productosSeed; // se actualiza con filtros/búsquedas
 
+// ==========================================
+// 🔹 RENDER DE PRODUCTOS
+// ==========================================
 function renderProductos(productos) {
   const lista = document.getElementById("lista-productos");
   lista.innerHTML = "";
@@ -88,9 +110,9 @@ function renderProductos(productos) {
   renderPaginacion(productos);
 }
 
-// -----------------------------
-// 🔹 Eventos de "Agregar al carrito"
-// -----------------------------
+// ==========================================
+// 🔹 EVENTOS DE "AGREGAR AL CARRITO"
+// ==========================================
 function prepararBotonesAgregar() {
   document.querySelectorAll(".agregar").forEach(btn => {
     btn.addEventListener("click", e => {
@@ -116,51 +138,9 @@ function prepararBotonesAgregar() {
   });
 }
 
-// -----------------------------
-// 🔹 Actualizar la cantidad en el carrito
-// -----------------------------
-function actualizarCantidad(id, cantidad) {
-  let carrito = obtenerCarrito();
-  const item = carrito.find(p => p.id === id);
-  if (item) {
-    item.cantidad = parseInt(cantidad);
-    guardarCarrito(carrito);
-  }
-}
-
-// -----------------------------
-// 🔹 Filtros y búsqueda
-// -----------------------------
-function aplicarFiltros() {
-  const texto = buscador.value.toLowerCase();
-  const categoriaActiva = document.querySelector(".subnav-links .activo")?.dataset.categoria || "todos";
-
-  let productosFiltrados = productosSeed.filter(p => {
-    const filtroNombre = p.nombre.toLowerCase().includes(texto);
-    const filtroCategoria = categoriaActiva === "todos" || p.categoria === categoriaActiva;
-
-    if (categoriaActiva === "x" || categoriaActiva === "x") {
-      return false;
-    }
-
-    return filtroNombre && filtroCategoria;
-  });
-
-  if (ordenPrecio.value === "asc") {
-    productosFiltrados.sort((a, b) => a.precioDetal - b.precioDetal);
-  } else if (ordenPrecio.value === "desc") {
-    productosFiltrados.sort((a, b) => b.precioDetal - a.precioDetal);
-  }
-
-  // Reiniciar paginación
-  paginaActual = 1;
-  productosFiltradosGlobal = productosFiltrados;
-  renderProductos(productosFiltrados);
-}
-
-// -----------------------------
-// 🔹 Manejo del Carrito (localStorage)
-// -----------------------------
+// ==========================================
+// 🔹 FUNCIONES DE CARRITO
+// ==========================================
 function obtenerCarrito() {
   return JSON.parse(localStorage.getItem("carrito")) || [];
 }
@@ -184,9 +164,9 @@ function agregarAlCarrito(id, cantidad) {
   actualizarCarritoEmergente();
 }
 
-// -----------------------------
-// 🔹 Carrito emergente
-// -----------------------------
+// ==========================================
+// 🔹 CARRITO EMERGENTE
+// ==========================================
 function actualizarCarritoEmergente() {
   const carrito = obtenerCarrito();
   const totalArticulos = carrito.reduce((acc, item) => acc + item.cantidad, 0);
@@ -206,41 +186,33 @@ function actualizarCarritoEmergente() {
   }
 }
 
-// -----------------------------
-// 🔹 Eventos UI
-// -----------------------------
-btnCatalogo.addEventListener("click", (e) => {
-  e.preventDefault();
-  catalogoSection.style.display = "block";
-  catalogoSection.scrollIntoView({ behavior: "smooth" });
+// ==========================================
+// 🔹 FILTROS Y BÚSQUEDAS
+// ==========================================
+function aplicarFiltros() {
+  const texto = buscador.value.toLowerCase();
+  const categoriaActiva = document.querySelector(".subnav-links .activo")?.dataset.categoria || "todos";
 
-  document.querySelector(".subnav-links .activo")?.classList.remove("activo");
-  btnCatalogo.classList.add("activo");
-
-  aplicarFiltros();
-});
-
-categoriasItems.forEach((item) => {
-  item.addEventListener("click", (e) => {
-    e.preventDefault();
-    document.querySelector(".subnav-links .activo")?.classList.remove("activo");
-    item.classList.add("activo");
-
-    catalogoSection.style.display = "block";
-    catalogoSection.scrollIntoView({ behavior: "smooth" });
-
-    aplicarFiltros();
+  let productosFiltrados = productosSeed.filter(p => {
+    const filtroNombre = p.nombre.toLowerCase().includes(texto);
+    const filtroCategoria = categoriaActiva === "todos" || p.categoria === categoriaActiva;
+    return filtroNombre && filtroCategoria;
   });
-});
 
-buscador.addEventListener("input", aplicarFiltros);
-ordenPrecio.addEventListener("change", aplicarFiltros);
-// ==================
+  if (ordenPrecio.value === "asc") {
+    productosFiltrados.sort((a, b) => a.precioDetal - b.precioDetal);
+  } else if (ordenPrecio.value === "desc") {
+    productosFiltrados.sort((a, b) => b.precioDetal - a.precioDetal);
+  }
+
+  paginaActual = 1;
+  productosFiltradosGlobal = productosFiltrados;
+  renderProductos(productosFiltrados);
+}
+
+// ==========================================
 // 🔹 MENÚ RESPONSIVE
-// ==================
-// ==============================
-// 📌 MENU RESPONSIVE (hamburguesa)
-// ==============================
+// ==========================================
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menu-toggle");
   const menu = document.getElementById("menu");
@@ -252,88 +224,35 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-const btnPaso1 = document.getElementById("btn-paso1");
-
-btnPaso1?.addEventListener("click", (e) => {
+// ==========================================
+// 🔹 EVENTOS UI
+// ==========================================
+btnCatalogo.addEventListener("click", (e) => {
   e.preventDefault();
   catalogoSection.style.display = "block";
   catalogoSection.scrollIntoView({ behavior: "smooth" });
-
   document.querySelector(".subnav-links .activo")?.classList.remove("activo");
-  btnCatalogo.classList.add("activo"); // Aquí puedes dejar btnCatalogo como referencia visual
-
+  btnCatalogo.classList.add("activo");
   aplicarFiltros();
 });
 
-function renderPaginacion(productos) {
-  const paginacion = document.getElementById("paginacion");
-  paginacion.innerHTML = "";
-
-  const totalPaginas = Math.ceil(productos.length / productosPorPagina);
-  if (totalPaginas <= 1) return; // No mostrar si solo hay una página
-
-  // Anterior
-  if (paginaActual > 1) {
-    const btnAnterior = document.createElement("button");
-    btnAnterior.textContent = "« Anterior";
-    btnAnterior.addEventListener("click", () => {
-      paginaActual--;
-      renderProductos(productosFiltradosGlobal);
-      catalogoSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-    paginacion.appendChild(btnAnterior);
-  }
-
-  // Números
-  for (let i = 1; i <= totalPaginas; i++) {
-    const btn = document.createElement("button");
-    btn.textContent = i;
-    if (i === paginaActual) btn.classList.add("activo");
-    btn.addEventListener("click", () => {
-      paginaActual = i;
-      renderProductos(productosFiltradosGlobal);
-      catalogoSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-    paginacion.appendChild(btn);
-  }
-
-  // Siguiente
-  if (paginaActual < totalPaginas) {
-    const btnSiguiente = document.createElement("button");
-    btnSiguiente.textContent = "Siguiente »";
-    btnSiguiente.addEventListener("click", () => {
-      paginaActual++;
-      renderProductos(productosFiltradosGlobal);
-    });
-    paginacion.appendChild(btnSiguiente);
-  }
-}
-
-function prepararCantidadBotones() {
-  document.querySelectorAll(".mas").forEach(btn => {
-    btn.addEventListener("click", e => {
-      const input = e.target.parentElement.querySelector(".cantidad");
-      input.value = parseInt(input.value) + 1;
-      actualizarCantidad(input.dataset.id, input.value);
-    });
+categoriasItems.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector(".subnav-links .activo")?.classList.remove("activo");
+    item.classList.add("activo");
+    catalogoSection.style.display = "block";
+    catalogoSection.scrollIntoView({ behavior: "smooth" });
+    aplicarFiltros();
   });
+});
 
-  document.querySelectorAll(".menos").forEach(btn => {
-    btn.addEventListener("click", e => {
-      const input = e.target.parentElement.querySelector(".cantidad");
-      if (parseInt(input.value) > 1) {
-        input.value = parseInt(input.value) - 1;
-        actualizarCantidad(input.dataset.id, input.value);
-      }
-    });
-  });
-}
+buscador.addEventListener("input", aplicarFiltros);
+ordenPrecio.addEventListener("change", aplicarFiltros);
 
-// -----------------------------
-// 🔹 Render inicial
-// -----------------------------
+// ==========================================
+// 🔹 RENDER INICIAL
+// ==========================================
 productosFiltradosGlobal = productosSeed;
 renderProductos(productosFiltradosGlobal);
 actualizarCarritoEmergente();
-
-
