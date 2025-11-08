@@ -1,0 +1,146 @@
+/*
+  ==============================================
+  Estilos para el Login Tributo "Girly y Hermoso"
+  ==============================================
+*/
+
+/* --- Base y Fondo --- */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    /* Fondo con degradado suave y girly */
+    background: linear-gradient(135deg, #fce3ee 0%, #ffc3e6 100%);
+    font-family: 'Arial', sans-serif; /* Puedes cambiar a una fuente más "girly" si la importas */
+    color: #4b0082; /* Tono morado oscuro para el texto principal */
+    overflow: hidden; /* Evita barras de desplazamiento innecesarias */
+}
+
+/* --- Contenedor Principal (Caja de Login) --- */
+.login-container {
+    background: rgba(255, 255, 255, 0.9); /* Blanco semitransparente */
+    padding: 40px;
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.4), /* Sombra rosa suave */
+                0 0 0 5px rgba(255, 255, 255, 0.5) inset; /* Borde interior blanco */
+    text-align: center;
+    width: 300px;
+    transition: all 0.5s ease-in-out;
+    /* Pequeño efecto 3D para destacar */
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.login-container:hover {
+    box-shadow: 0 15px 40px rgba(255, 105, 180, 0.6),
+                0 0 0 8px rgba(255, 255, 255, 0.7) inset;
+    transform: perspective(1000px) rotateY(2deg);
+}
+
+/* --- Título Homenaje (Dale un toque personal aquí!) --- */
+h2 {
+    font-size: 2em;
+    margin-bottom: 25px;
+    color: #ff69b4; /* Rosa Caliente (Hot Pink) */
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+    /* El texto del H2 debe decir algo como: "Bienvenida, [Nombre de tu Novia]!" */
+}
+
+/* --- Campos de Formulario (Input) --- */
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ffc0cb; /* Borde rosa pastel */
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #4b0082;
+    background-color: #fff0f5; /* Fondo blanco rosado muy claro */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #ff69b4; /* Borde rosa caliente al enfocar */
+    box-shadow: 0 0 8px rgba(255, 105, 180, 0.5); /* Sombra suave */
+    outline: none;
+}
+
+/* --- Botón de "Entrar" (El más importante) --- */
+button[type="submit"] {
+    width: 100%;
+    background-color: #ff69b4; /* Rosa Caliente */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Efecto de 'brillo' sutil */
+    background-image: linear-gradient(to right, #ff69b4 0%, #ffc0cb 50%, #ff69b4 100%);
+    background-size: 200% auto;
+}
+
+button[type="submit"]:hover {
+    background-position: right center; /* Mueve el brillo */
+    transform: translateY(-2px); /* Pequeño levantamiento */
+    box-shadow: 0 6px 10px rgba(255, 105, 180, 0.5);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* --- Mensaje de Error --- */
+.error {
+    color: #dc143c; /* Carmesí/Rojo para el error */
+    margin-top: 15px;
+    font-weight: bold;
+    animation: shake 0.5s; /* Animación de error */
+}
+
+/* Animación para el mensaje de error */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+/* --- Detalles Adicionales (Opcional: puedes añadir más elementos decorativos) --- */
+
+/* Por ejemplo, un patrón de corazones o brillos en el fondo */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Ejemplo de patrón de fondo */
+    background-image: radial-gradient(#ffc0cb 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.1; /* Muy sutil */
+    z-index: -1;
+}
+
+/* Icono/placeholder para una foto de ella o un icono bonito */
+.login-container::before {
+    content: '👑'; /* Corona o '✨' o '🌸' o '💖' */
+    font-size: 3em;
+    display: block;
+    margin-bottom: 10px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.9; }
+}
