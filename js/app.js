@@ -1,5 +1,5 @@
 // ================================
-// app.js (versión adaptada con modal de confirmación + login integrado)
+// app.js (versión adaptada con modal de confirmación + login integrado + paginación antigua)
 // ================================
 
 import { productosSeed } from "./seed.js";
@@ -11,11 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const sesionActiva = localStorage.getItem("sesionActiva");
 
   if (!sesionActiva) {
-    // Si no hay sesión, mostrar versión pública
     document.body.classList.add("modo-visitante");
     console.log("👤 Modo visitante activo");
   } else {
-    // Si hay sesión, activar modo admin
     document.body.classList.add("modo-admin");
     console.log("🔑 Sesión activa (modo admin)");
   }
@@ -61,10 +59,10 @@ function renderProductos(productos) {
         etiqueta = `<span class="etiqueta etiqueta-nuevo">NUEVO</span>`;
         break;
       case "promocion":
-        etiqueta = `<span class="etiqueta etiqueta-promocion">PROMOCION</span>`;
+        etiqueta = `<span class="etiqueta etiqueta-promocion">PROMOCIÓN</span>`;
         break;
       case "ultimos":
-        etiqueta = `<span class="etiqueta etiqueta-ultimos">ULTIMAS UNIDADES</span>`;
+        etiqueta = `<span class="etiqueta etiqueta-ultimos">ÚLTIMAS UNIDADES</span>`;
         break;
       default:
         etiqueta = "";
@@ -120,14 +118,11 @@ function prepararBotonesAgregar() {
       const id = parseInt(boton.dataset.id);
       const inputCantidad = document.querySelector(`.cantidad[data-id="${id}"]`);
 
-      // Evitar clics repetidos
       boton.disabled = true;
       setTimeout(() => (boton.disabled = false), 1000);
 
-      // Agregar producto
       agregarAlCarrito(id, inputCantidad.value);
 
-      // ✅ Mostrar modal de confirmación
       const modal = document.getElementById("modal-carrito");
       modal.classList.add("mostrar");
 
@@ -171,18 +166,15 @@ function actualizarCarritoEmergente() {
   const carrito = obtenerCarrito();
   const totalArticulos = carrito.reduce((acc, item) => acc + item.cantidad, 0);
 
-  const carritoEmergente = document.getElementById('carrito-emergente');
-  const totalArticulosElem = document.getElementById('total-articulos');
-  
-  if (totalArticulos > 0) {
-    carritoEmergente.style.display = 'block';
-    totalArticulosElem.textContent = `${totalArticulos} Artículos`;
+  const carritoEmergente = document.getElementById("carrito-emergente");
+  const totalArticulosElem = document.getElementById("total-articulos");
 
-    setTimeout(() => {
-      carritoEmergente.style.display = 'none';
-    }, 5000);
+  if (totalArticulos > 0) {
+    carritoEmergente.style.display = "block";
+    totalArticulosElem.textContent = `${totalArticulos} Artículos`;
+    setTimeout(() => (carritoEmergente.style.display = "none"), 5000);
   } else {
-    carritoEmergente.style.display = 'none';
+    carritoEmergente.style.display = "none";
   }
 }
 
@@ -249,6 +241,78 @@ categoriasItems.forEach((item) => {
 
 buscador.addEventListener("input", aplicarFiltros);
 ordenPrecio.addEventListener("change", aplicarFiltros);
+
+// ==========================================
+// 🔹 PAGINACIÓN (antigua restaurada)
+// ==========================================
+function renderPaginacion(productos) {
+  const paginacion = document.getElementById("paginacion");
+  if (!paginacion) return;
+
+  paginacion.innerHTML = "";
+  const totalPaginas = Math.ceil(productos.length / productosPorPagina);
+  if (totalPaginas <= 1) return;
+
+  // Botón Anterior
+  if (paginaActual > 1) {
+    const btnAnterior = document.createElement("button");
+    btnAnterior.textContent = "« Anterior";
+    btnAnterior.addEventListener("click", () => {
+      paginaActual--;
+      renderProductos(productosFiltradosGlobal);
+      catalogoSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    paginacion.appendChild(btnAnterior);
+  }
+
+  // Números de página
+  for (let i = 1; i <= totalPaginas; i++) {
+    const btn = document.createElement("button");
+    btn.textContent = i;
+    if (i === paginaActual) btn.classList.add("activo");
+    btn.addEventListener("click", () => {
+      paginaActual = i;
+      renderProductos(productosFiltradosGlobal);
+      catalogoSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    paginacion.appendChild(btn);
+  }
+
+  // Botón Siguiente
+  if (paginaActual < totalPaginas) {
+    const btnSiguiente = document.createElement("button");
+    btnSiguiente.textContent = "Siguiente »";
+    btnSiguiente.addEventListener("click", () => {
+      paginaActual++;
+      renderProductos(productosFiltradosGlobal);
+      catalogoSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    paginacion.appendChild(btnSiguiente);
+  }
+}
+
+// ==========================================
+// 🔹 BOTONES DE CANTIDAD
+// ==========================================
+function prepararCantidadBotones() {
+  document.querySelectorAll(".mas").forEach(btn => {
+    btn.addEventListener("click", e => {
+      const input = e.target.parentElement.querySelector(".cantidad");
+      input.value = parseInt(input.value) + 1;
+      actualizarCantidad(input.dataset.id, input.value);
+    });
+  });
+
+  document.querySelectorAll(".menos").forEach(btn => {
+    btn.addEventListener("click", e => {
+      const input = e.target.parentElement.querySelector(".cantidad");
+      if (parseInt(input.value) > 1) {
+        input.value = parseInt(input.value) - 1;
+        actualizarCantidad(input.dataset.id, input.value);
+      }
+    });
+  });
+}
 
 // ==========================================
 // 🔹 RENDER INICIAL
