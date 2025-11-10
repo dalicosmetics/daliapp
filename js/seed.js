@@ -524,8 +524,8 @@ export const productosSeed = [
     3400,
     2300,
     [
-      "assets/img/ojos/221.avif", //Tus imagenes tienen ese formato raro .avif CTRL + S  y compruebn
-      "assets/img/ojos/221-2.avif",
+      "assets/img/ojos/221.jpg", //Tus imagenes tienen ese formato raro .avif CTRL + S  y compruebn
+      "assets/img/ojos/221-2.jpg",
     ],
     "🔥 36 Horas de Impacto. Delineador en plumon. Precisión que no se borra. ¡Tu mirada, inalterable!",
   ),
@@ -1103,8 +1103,8 @@ export const productosSeed = [
     3000,
     1300,
     [
-      "assets/img/accesorios/moñas1.avif",
-      "assets/img/accesorios/moñas2.avif",
+      "assets/img/accesorios/moñas1.jpg",
+      "assets/img/accesorios/moñas2.jpg",
     ],
     " Scrunchies de satin. ¡Luce un peinado elegante sin maltratar tu cabello!"
   ),
@@ -1115,8 +1115,8 @@ export const productosSeed = [
     6000,
     4600,
     [
-      "assets/img/accesorios/cremas1.avif",
-      "assets/img/accesorios/cremas2.avif",
+      "assets/img/accesorios/cremas1.jpg",
+      "assets/img/accesorios/cremas2.jpg",
     ],
     "  Tu Dosis de Suavidad Diaria. Cremas de Manos con ingredientes naturales. Esenciales para bolso. ¡Nutrición instantánea!einado elegante sin maltratar tu cabello!"
   ),
