@@ -517,6 +517,18 @@ export const productosSeed = [
     "💖✍️ ¡Cejas perfectas todo el día!  🤩. Lápiz con color y cepillo para un acabado natural. Fórmula Waterproof & Long Lasting 💧. Easy to shape use para unas cejas definidas y naturales.",
     "nuevo"
   ),
+    new Producto(
+    221,
+    "Delineador 36H ",
+    "Ojos",
+    3400,
+    2300,
+    [
+      "assets/img/ojos/221.avif", //Tus imagenes tienen ese formato raro .avif CTRL + S  y compruebn
+      "assets/img/ojos/221-2.avif",
+    ],
+    "🔥 36 Horas de Impacto. Delineador en plumon. Precisión que no se borra. ¡Tu mirada, inalterable!",
+  ),
   new Producto(
     300,
     "Base liquida My Melody en diferentes tonos.",
@@ -926,7 +938,7 @@ export const productosSeed = [
   new Producto(
     500,
     "Par de Caimanes Hawaianos Pequeños",
-    "Accesorios",
+    "Otros",
     5000,
     5000,
     [
@@ -938,7 +950,7 @@ export const productosSeed = [
   new Producto(
     501,
     "Brochas Cola de Sirena",
-    "Accesorios",
+    "Otros",
     12000,
     8250,
     [
@@ -951,7 +963,7 @@ export const productosSeed = [
   new Producto(
     502,
     "Brochas Deluxe",
-    "Accesorios",
+    "Otros",
     18900,
     12500,
     [
@@ -967,7 +979,7 @@ export const productosSeed = [
   new Producto(
     503,
     "Perfiladores de cejas x3",
-    "Accesorios",
+    "Otros",
     3000,
     1900,
     [
@@ -980,7 +992,7 @@ export const productosSeed = [
   new Producto(
     504,
     "Beauty Blender",
-    "Accesorios",
+    "Otros",
     3500,
     1900,
     [
@@ -993,7 +1005,7 @@ export const productosSeed = [
   new Producto(
     505,
     "Brocha maquillaje profesional",
-    "Accesorios",
+    "Otros",
     9000,
     6500,
     [
@@ -1006,7 +1018,7 @@ export const productosSeed = [
   new Producto(
     506,
     "Brochas unicolor",
-    "Accesorios",
+    "Otros",
     3500,
     2750,
     [
@@ -1019,7 +1031,7 @@ export const productosSeed = [
   new Producto(
     507,
     "Encrespador",
-    "Accesorios",
+    "Otros",
     7000,
     3900,
     [
@@ -1033,7 +1045,7 @@ export const productosSeed = [
   new Producto(
     508,
     "Beauty Blender Kiss Lovely",
-    "Accesorios",
+    "Otros",
     3900,
     2900,
     [
@@ -1045,7 +1057,7 @@ export const productosSeed = [
   new Producto(
     509,
     "Brochas Unicolor",
-    "Accesorios",
+    "Otros",
     8000,
     6100,
     [
@@ -1060,7 +1072,7 @@ export const productosSeed = [
   new Producto(
     510,
     "Uñas Postizas",
-    "Accesorios",
+    "Otros",
     6000,
     4800,
     [
@@ -1075,7 +1087,7 @@ export const productosSeed = [
   new Producto(
     511,
     "Bolsas Tornasol",
-    "Accesorios",
+    "Otros",
     1000,
     500,
     [
@@ -1084,6 +1096,28 @@ export const productosSeed = [
     " 💅 Colección exclusiva de uñas postizas . Diseños variados y a la moda. ¡Ponte chic en minutos!",
     "nuevo"
   ),
-
-
+  new Producto(
+    512,
+    "Scrunchies",
+    "Otros",
+    3000,
+    1300,
+    [
+      "assets/img/accesorios/moñas1.avif",
+      "assets/img/accesorios/moñas2.avif",
+    ],
+    " Scrunchies de satin. ¡Luce un peinado elegante sin maltratar tu cabello!"
+  ),
+  new Producto(
+    513,
+    "Crema de manos",
+    "Otros",
+    6000,
+    4600,
+    [
+      "assets/img/accesorios/cremas1.avif",
+      "assets/img/accesorios/cremas2.avif",
+    ],
+    "  Tu Dosis de Suavidad Diaria. Cremas de Manos con ingredientes naturales. Esenciales para bolso. ¡Nutrición instantánea!einado elegante sin maltratar tu cabello!"
+  ),
 ];
