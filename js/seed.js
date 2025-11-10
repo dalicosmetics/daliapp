@@ -1103,8 +1103,8 @@ export const productosSeed = [
     3000,
     1300,
     [
-      "assets/img/accesorios/moñas1.jpg",
-      "assets/img/accesorios/moñas2.jpg",
+      "assets/img/accesorios/Moñas1.jpg",
+      "assets/img/accesorios/Moñas2.jpg",
     ],
     " Scrunchies de satin. ¡Luce un peinado elegante sin maltratar tu cabello!"
   ),
@@ -1115,8 +1115,8 @@ export const productosSeed = [
     6000,
     4600,
     [
-      "assets/img/accesorios/cremas1.jpg",
-      "assets/img/accesorios/cremas2.jpg",
+      "assets/img/accesorios/Cremas1.jpg",
+      "assets/img/accesorios/Cremas2.jpg",
     ],
     "  Tu Dosis de Suavidad Diaria. Cremas de Manos con ingredientes naturales. Esenciales para bolso. ¡Nutrición instantánea!einado elegante sin maltratar tu cabello!"
   ),
