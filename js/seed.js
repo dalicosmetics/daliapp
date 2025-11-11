@@ -15,7 +15,6 @@ export const productosSeed = [
       "assets/img/labios/balsamo-ositos2.jfif",
     ],
     "Este encantador set incluye 24 bálsamos labiales individuales en adorables envases con forma de osito. Cada bálsamo está diseñado para brindar humectación y un toque de color sutil a tus labios. ¡Perfecto para llevar contigo o para regalar un detalle dulce y útil!",
-    "nuevo"
   ),
   new Producto(
     102,
@@ -28,17 +27,16 @@ export const productosSeed = [
       "assets/img/labios/balsamo-animalitos2.jfif",
     ],
     "Este adorable paquete contiene 24 bálsamos en barra de la marca IMAN OF NOBLE, cada uno con un empaque único y divertido. Con diseños coloridos y vibrantes que incluyen un cerdito, un gatito, un perrito y otras criaturas adorables, son perfectos para darle un toque de alegría a tu rutina de belleza. Ideales para mantener tus labios hidratados y suaves durante todo el día. ¡Lleva uno en cada bolso o compártelos con tus amigas! Son el detalle perfecto para cualquier amante de los productos de belleza creativos.",
-    "nuevo"
   ),
   new Producto(
     103,
     "Lip Glow Oil Mágico Pola Aylr",
     "Labios",
     7000,
-    4200,
+    5400,
     ["assets/img/labios/gloss-pola.jfif"],
     "Descubre el poder de este aceite labial nutritivo y brillante, diseñado para transformar tus labios y darles un aspecto jugoso y saludable al instante. El Lip Glow Oil de Pola Aylr es más que un simple gloss; es un tratamiento completo que hidrata, nutre y realza tu belleza natural.",
-    "nuevo"
+    
   ),
   new Producto(
     104,
@@ -48,7 +46,7 @@ export const productosSeed = [
     3000,
     ["assets/img/labios/gloss-huellita.jfif"],
     "¡Brillo y Ternura en tus Labios!",
-    "nuevo"
+    
   ),
   new Producto(
     105,
@@ -61,7 +59,7 @@ export const productosSeed = [
       "assets/img/labios/labial-metalizado2.jfif",
     ],
     "Atrae todas las miradas con el labial más glamoroso del momento. Este labial combina un diseño futurista con una fórmula de alto rendimiento para que tus labios luzcan espectaculares. Aparte, con su empaque metálico rosa y su diseño de cápsula, este labial no solo es una joya para tus labios, sino también una pieza de colección en tu cosmetiquera.",
-    "nuevo"
+    
   ),
   new Producto(
     106,
@@ -71,7 +69,7 @@ export const productosSeed = [
     4000,
     ["assets/img/labios/labial-mate1.jfif"],
     "Descubre el secreto de unos labios perfectamente definidos y con un acabado impecable. Este labial líquido Matte es la herramienta que necesitas para lucir sofisticada, elegante y a la moda. Con un empaque elegante y un display de 24 unidades, es el set perfecto para tener todos los colores que necesitas para cualquier look, ¡o para impulsar tu negocio de belleza!",
-    "nuevo"
+    
   ),
   new Producto(
     107,
@@ -84,7 +82,7 @@ export const productosSeed = [
       "assets/img/labios/tinta-juguito2.jfif",
     ],
     "Dale a tus labios un toque de color duradero con estas adorables tintas labiales inspiradas en tus personajes favoritos. Cada tinta viene en un envase único con forma de juguito, perfecto para llevar contigo. Su fórmula de larga duración no solo hidrata tus labios, sino que también deja un color vibrante y natural que no se desvanece fácilmente.",
-    "nuevo"
+    
   ),
   new Producto(
     108,
@@ -97,7 +95,7 @@ export const productosSeed = [
       "assets/img/labios/tinta-kitty2.jfif",
     ],
     "¡Brilla con el Dulce Toque de Hello Kitty! ✨ Exclusivos Tintas Labiales O'LANNEY Professional. ¿Buscas un toque de magia y color para tus labios? ¡Te presentamos el adorable expositor de 24 tintas labiales O'LANNEY Professional, protagonizados por la irresistible Hello Kitty! Cada brillo es una pequeña joya que combina una fórmula hidratante con un diseño encantador que te robará el corazón.",
-    "nuevo"
+    
   ),
   new Producto(
     109,
@@ -110,7 +108,7 @@ export const productosSeed = [
       "assets/img/labios/brillo-frutas2.jfif",
     ],
     "Imagina un gloss tan divertido como efectivo. Cada uno de estos 24 brillos es una pequeña obra de arte con un diseño único: un lindo conejito y una tapa en forma de fruta. Desde la uva hasta la fresa, cada uno es una aventura. Con su fórmula llena de brillo, tus labios no solo se verán espectaculares, sino que también se sentirán hidratados y ligeros, sin la sensación pegajosa. ¡Es el toque frutal y brillante que tu rutina de belleza necesitaba!",
-    "nuevo"
+    
   ),
   new Producto(
     110,
@@ -123,7 +121,7 @@ export const productosSeed = [
       "assets/img/labios/labial-dunuf2.jfif",
     ],
     "Los brillos labiales DUNUF son la mezcla perfecta de estilo y cuidado. Su textura ligera y su fórmula de hidratación suave te permiten lucir un color vibrante sin sacrificar la comodidad. Con una gama de tonos desde el rojo clásico hasta el rosa más dulce, este brillo te da un efecto natural que dura todo el día sin resecar tus labios. ¡Un producto esencial para un look impecable en cualquier momento!",
-    "nuevo"
+    
   ),
   new Producto(
     111,
@@ -137,7 +135,7 @@ export const productosSeed = [
       "assets/img/labios/gloss-kevinycoco3.jfif",
     ],
     "Este exquisito set de brillos labiales KEVIN & COCO viene en una caja de presentación que es tan hermosa como el producto. Con 36 piezas que ofrecen una variedad de colores vibrantes, cada brillo tiene un adorable diseño en la tapa inspirado en deliciosos postres y frutas. Su fórmula suave y ligera te da un acabado brillante y un toque de color sutil, ideal para un look fresco y divertido. ¡Perfecto para coleccionar o como un regalo que encantará!",
-    "nuevo"
+    
   ),
   new Producto(
     112,
@@ -150,7 +148,7 @@ export const productosSeed = [
       "assets/img/labios/voluminizador-karite2.jfif",
     ],
     "Este innovador gloss voluminizador ha sido creado para potenciar la belleza natural de tus labios. Su fórmula especial con colágeno activo no solo maximiza el volumen, sino que también hidrata profundamente, previniendo la sequedad y las líneas finas. El resultado es una sensación de suavidad, un brillo espejo y unos labios visiblemente más carnosos y atractivos. Es ideal para usarlo solo o como base para tu labial favorito. ¡Prepárate para atraer todas las miradas!",
-    "nuevo"
+    
   ),
   new Producto(
     113,
@@ -163,7 +161,7 @@ export const productosSeed = [
       "assets/img/labios/labial-velvet2.jfif",
     ],
     "Experimenta el confort y el color NUDE con los labiales Matte Velvet. Su textura aterciopelada se desliza suavemente sobre los labios, ofreciendo una cobertura completa y un acabado mate duradero sin sensación de sequedad. Disponibles en una gama de tonos cautivadores, estos labiales son ideales para expresar tu estilo con confianza y sofisticación. ¡Labios irresistibles con un acabado mate de ensueño!",
-    "nuevo"
+    
   ),
   new Producto(
     114,
@@ -176,7 +174,7 @@ export const productosSeed = [
       "assets/img/labios/labial-kevinycoco2.jfif",
     ],
     "Dale a tus labios un toque de diversión y sabor con los brillos labiales Jelly Bomb de KEVIN&COCO. Inspirados en frutas frescas, estos brillos te ofrecen un acabado irresistiblemente brillante y una textura ligera y no pegajosa. Cada uno con un aroma único, son perfectos para hidratar y dar un toque de color sutil a tus labios en tu día a día.",
-    "nuevo"
+    
   ),
   new Producto(
     115,
@@ -191,7 +189,7 @@ export const productosSeed = [
       "assets/img/labios/gloss-stich2.jfif",
     ],
     "Cada gloss es un pequeño tesoro, con destellos vibrantes y una elegante tapa en forma de corazón. Además de dejar tus labios con un acabado brillante y un sutil toque de color, tienen un aroma dulce y agradable. Su fórmula ligera no es pegajosa, lo que los hace ideales para uso diario.",
-    "nuevo"
+    
   ),
   new Producto(
     116,
@@ -205,7 +203,7 @@ export const productosSeed = [
       "assets/img/labios/la.jpeg",
     ],
     "✨¡Desata tu poder con los labios!💄 Los labiales líquidos CAKAILA combinan color intenso, acabado mate y larga duración en una fórmula irresistible. ¡Seduce con cada palabra! 🔥",
-    "nuevo"
+    
   ),
   new Producto(
     117,
@@ -218,7 +216,7 @@ export const productosSeed = [
       "assets/img/labios/118-labial-nude-2.jfif",
     ],
     "💋 ¡Labios que impactan! 💄 Descubre los nuevos colores NUDE, acabado mate y ultra hidratación en cada aplicación. ¡Tu boca será el centro de todas las miradas! 🔥 Extrema duración",
-    "nuevo"
+    
   ),
   new Producto(
     118,
@@ -230,7 +228,7 @@ export const productosSeed = [
       "assets/img/labios/118-tinta-paleta.jfif",
     ],
     "🍭 ¡Dulces labios irresistibles! 💋 Nuestras tintas vienen en un adorable empaque de paleta, pero lo mejor está dentro: colores vibrantes, textura ligera y un brillo que enamora. ¡Atrévete a lucir labios de antojo! ✨",
-    "nuevo"
+    
   ),
   new Producto(
     119,
@@ -390,7 +388,7 @@ export const productosSeed = [
     "Paleta Libro KEVIN Y COCO",
     "Ojos",
     25900,
-    19500,
+    21400,
     [
       "assets/img/ojos/paleta-librokyc1.jfif",
       "assets/img/ojos/paleta-librokyc2.jfif",
@@ -529,6 +527,107 @@ export const productosSeed = [
     ],
     "🔥 36 Horas de Impacto. Delineador en plumon. Precisión que no se borra. ¡Tu mirada, inalterable!",
   ),
+
+  new Producto(
+    222,
+    "💖 Paleta Kevin & Coco: ¡Glamour Felino! 🐆",
+    "Ojos",
+    15000,
+    12900,
+    [
+      "assets/img/ojos/paleta-rubia.jfif", //Tus imagenes tienen ese formato raro .avif CTRL + S  y compruebn
+      "assets/img/ojos/paleta-rubia2.jfif",
+    ],
+    "🔥 36 Horas de Impacto. Delineador en plumon. Precisión que no se borra. ¡Tu mirada, inalterable!",
+    "nuevo"
+  ),
+
+  new Producto(
+    223,
+    "🍷 Paleta Kevin & Coco: ¡Noche de Fiesta! ✨",
+    "Ojos",
+    15000,
+    12900,
+    [
+      "assets/img/ojos/paleta-fiesta1.jfif", //Tus imagenes tienen ese formato raro .avif CTRL + S  y compruebn
+      "assets/img/ojos/paleta-fiesta2.jfif",
+    ],
+    "9 sombras en tonos cálidos, dorados y rose gold con acabados extra brillantes. Perfecta para crear looks glamurosos de noche. ¡El color neón te da un toque inesperado! ¡Lista para deslumbrar en cualquier celebración!",
+    "nuevo"
+  ),
+
+  
+  new Producto(
+    224,
+    "🌈 Paleta Kevin & Coco: Doncella💖",
+    "Ojos",
+    26000,
+    23900,
+    [
+      "assets/img/ojos/paleta-doncella1.jfif", 
+      "assets/img/ojos/paleta-doncella2.jfif",
+      "assets/img/ojos/paleta-doncella3.jfif",
+      "assets/img/ojos/paleta-doncella4.jfif",
+    ],
+    "25 tonos explosivos: mates, brillos, shimmers y colores neón. ¡Todo lo que necesitas en una sola paleta para crear looks atrevidos, coloridos y llenos de fantasía! ¡Tu creatividad no tendrá límites!",
+    "nuevo"
+  ),
+
+  new Producto(
+    225,
+    "💎Paletas Raymar💖",
+    "Ojos",
+    7000,
+    5900,
+    [
+      "assets/img/ojos/paleta-reymar.jpg",
+    ],
+    "Estas mini paletas de sombras tienen todo para una mirada cautivadora: tonos neutros, vibrantes mates y brillos espectaculares. Su diseño compacto las hace perfectas para llevar. ¡Colecciona todos los sets y crea infinitos looks de impacto!",
+    "nuevo"
+  ),
+
+  new Producto(
+    226,
+    "Paleta todo en uno 🎨",
+    "Ojos",
+    23500,
+    19300,
+    [
+      "assets/img/ojos/paleta-allin.jfif",
+      "assets/img/ojos/paleta-allin2.jfif",
+      "assets/img/ojos/paleta-allin3.jfif",
+      "assets/img/ojos/paleta-allin4.jfif",
+    ],
+    "Tu Set Todo en Uno y Súper Colorido 🎨 En ella encontrarás sombras mattes, glitters, rubores, iluminadores y labiales. Con tonos terracotas, ideales para maquillarte todos los días. Su tamaño es perfecto para llevar en tu cosmetiquera. Son 4 gamas inspiradas en las estaciones: Otoño, primavera, invierno y verano.",
+    "nuevo"
+  ),
+
+  new Producto(
+    227,
+    "♥️ PALETA DE SOMBRAS MAGIC GIRL LOFSHE ♥️🌟 ",
+    "Ojos",
+    25000,
+    22600,
+    [
+      "assets/img/ojos/paleta-magic.jfif",
+      "assets/img/ojos/paleta-magic2.jfif",
+      "assets/img/ojos/paleta-magic3.jfif",
+      "assets/img/ojos/paleta-magic4.jfif",
+    ],
+    "✨️ ¡Explora un sinfín de looks con la paleta de sombras de ojos Magic Girl de Lofshe!; Con una impresionante gama de 35 tonos vibrantes ",
+    "nuevo"
+  ),
+
+
+
+
+
+
+
+
+
+
+
   new Producto(
     300,
     "Base liquida My Melody en diferentes tonos.",
@@ -644,7 +743,7 @@ export const productosSeed = [
     "Polvo de Hadas",
     "Rostro",
     8000,
-    4900,
+    5500,
     [
       "assets/img/rostro/polvos-hadas1.jfif",
       "/assets/img/rostro/polvos-hadas2.jfif",
@@ -747,7 +846,7 @@ export const productosSeed = [
     "Contorno 2 en 1 en Crema",
     "Rostro",
     7000,
-    3900,
+    4600,
     [
       "assets/img/rostro/317-contorno-2-en-1-1.jfif",
       "assets/img/rostro/317-contorno-2-en-1-4.jfif",
@@ -757,6 +856,27 @@ export const productosSeed = [
     "🎨✨ ¡Magia en un solo lápiz! Este producto de doble punta para un contorno perfecto. 🤎 El tono oscuro define y el tono claro ilumina y resalta. Un must-have para esculpir tu rostro con facilidad. ¡Efecto 3D al instante! 🌟",
     "nuevo"
   ),
+
+  new Producto(
+    317,
+    " 🐻Rubor de Oso: ¡Color y Ternura! 🍑",
+    "Rostro",
+    7000,
+    4900,
+    [
+      "assets/img/rostro/Rubor-Oso.jfif",
+    ],
+    "Estos son rubores en crema con un envase de oso irresistible, su fórmula cremosa se difumina a la perfección para dejar un acabado fresco y natural en tus mejillas. ¡El toque de color más dulce que podrás llevar!",
+    "nuevo"
+  ),
+
+  
+
+
+
+
+
+
   new Producto(
     400,
     "Serum Acido Hialuronico",
@@ -958,7 +1078,7 @@ export const productosSeed = [
       "assets/img/ojos/brocha-sirena2.jfif",
     ],
     "Crea looks de fantasía con nuestro Set de Brochas con Diseño de Sirena. Cada set de 10 brochas presenta un mango de cola de sirena en colores metálicos, ideal para aplicar y difuminar maquillaje en ojos y rostro. ¡Un toque mágico para tu colección de belleza!",
-    "nuevo"
+    "agotado"
   ),
   new Producto(
     502,
@@ -987,7 +1107,7 @@ export const productosSeed = [
       "assets/img/ojos/perfilador-cejas2.jfif",
     ],
     "Mantén tus cejas siempre perfectas esta herramienta es la solución ideal para el retoque diario, permitiéndote eliminar el exceso de vello y dar forma a tus cejas de manera fácil y sin irritaciones. Su hoja de alta calidad y diseño ergonómico garantizan un perfilado suave y un resultado profesional, justo como lo harías en un salón.",
-    "ultimos"
+    "agotado"
   ),
   new Producto(
     504,
@@ -1000,7 +1120,7 @@ export const productosSeed = [
       "assets/img/rostro/beauty-blenderkawaii2.jfif",
     ],
     "Dale un toque divertido a tu rutina de maquillaje con estas adorables esponjas. Su material de alta calidad permite una aplicación suave y uniforme de bases, correctores y polvos. Úsalas en seco para una cobertura total o húmedas para un acabado natural y luminoso.",
-    "ultimos"
+    "agotado"
   ),
   new Producto(
     505,
@@ -1026,20 +1146,19 @@ export const productosSeed = [
       "assets/img/rostro/brocha-unicolor2.jfif",
     ],
     "Lleva tu maquillaje al siguiente nivel con nuestro set de brochas en tonos pastel. Cada paquete incluye brochas esenciales para rostro y ojos, con cerdas suaves y un diseño adorable. Elige tu color favorito y crea looks increíbles de forma fácil y divertida.",
-    "nuevo"
+    "agotado"
   ),
   new Producto(
     507,
     "Encrespador",
     "Otros",
     7000,
-    3900,
+    5400,
     [
-      "assets/img/ojos/220-encrespador2.jfif",
-      "assets/img/ojos/220-encrespador1.jfif",
-      "assets/img/ojos/220-encrespador3.jfif",
+      "assets/img/accesorios/encrespador.jfif",
+      "assets/img/accesorios/encrespador2.jfif",
     ],
-    "🔥 Encrespador de Pestañas – Levanta y curva tus pestañas al instante para una mirada más abierta y expresiva. 👁️✨",
+    "Consigue unas pestañas perfectamente curvadas y una mirada deslumbrante. ¡Elige tu tono holográfico favorito: azul, rosa o morado y transforma tu rutina de belleza!",
     "nuevo"
   ),
   new Producto(
@@ -1052,7 +1171,7 @@ export const productosSeed = [
       "assets/img/rostro/317-beauty-blender.jfif",
     ],
     "Beauty Blender 💖 Esponja de maquillaje que permite aplicar base, corrector o polvos de forma uniforme, logrando un acabado natural y sin marcas",
-    "nuevo"
+    "agotado"
   ),
   new Producto(
     509,
@@ -1067,7 +1186,7 @@ export const productosSeed = [
       "assets/img/ojos/221-brochas-unicolor-brillantes3.jfif",
     ],
     "✨ Set de Brochas de Maquillaje – Incluye brochas suaves y precisas para aplicar base, rubor, sombras y más. Sus mangos ligeros y coloridos ofrecen un agarre cómodo, ideal para lograr un maquillaje perfecto. Perfectas para uso diario o profesional. 💖💄",
-    "nuevo"
+    "agotado"
   ),
   new Producto(
     510,
@@ -1120,4 +1239,78 @@ export const productosSeed = [
     ],
     "  Tu Dosis de Suavidad Diaria. Cremas de Manos con ingredientes naturales. Esenciales para bolso. ¡Nutrición instantánea!einado elegante sin maltratar tu cabello!"
   ),
+  new Producto(
+    514,
+    "Encrespador Patita de Gato",
+    "Otros",
+    4500,
+    3100,
+    [
+      "assets/img/accesorios/encrespadorpatadegato.jfif",
+    ],
+    "Este rizador de pestañas Mocmallure es tu nuevo secreto de belleza. Su diseño compacto y adorable color rosa con orejitas y huellitas te permite curvar tus pestañas de forma fácil y perfecta. ¡Llévalo a todas partes para una mirada coqueta al instante!",
+    "nuevo"
+  ),
+
+  new Producto(
+    515,
+    "Espejo de Bolsillo con Estilo 🗼",
+    "Otros",
+    3500,
+    2500,
+    [
+      "assets/img/accesorios/espejos1.jfif",
+      "assets/img/accesorios/espejos2.jfif",
+      "assets/img/accesorios/espejos3.jfif",
+      "assets/img/accesorios/espejos4.jfif",
+    ],
+    "¡Los espejos compactos de Engol son el accesorio perfecto para tus retoques! Elige entre diseños adorables y modernos: flamencos, París, flores o el simpático búho. Doble espejo y tamaño ideal para llevar en tu bolso. ¡Siempre lista y con un toque de glamour!",
+    "nuevo"
+  ),
+
+  new Producto(
+    516,
+    "Toallas desmaquillantes Engol",
+    "Otros",
+    5000,
+    4000,
+    [
+      "assets/img/accesorios/toallas1.jfif",
+      "assets/img/accesorios/toallas2.jfif",
+      "assets/img/accesorios/toallas3.jfif",
+    ],
+    "Son tu solución rápida y suave. Enriquecidas con extracto de aloe vera, limpian a profundidad párpados y rostro, dejando tu piel fresca e hidratada. ¡Llévalas contigo y desmaquíllate sin esfuerzo!",
+    "nuevo"
+  ),
+
+  new Producto(
+    517,
+    "💖Mantequillas Victoria Secret✨ ",
+    "Otros",
+    15000,
+    12000,
+    [
+      "assets/img/accesorios/manetquilla-victoria.jfif",
+      "assets/img/accesorios/manetquilla-victoria.jfif",
+      "assets/img/accesorios/manetquilla-victoria.jfif",
+    ],
+    "Son tu solución rápida y suave. Enriquecidas con extracto de aloe vera, limpian a profundidad párpados y rostro, dejando tu piel fresca e hidratada. ¡Llévalas contigo y desmaquíllate sin esfuerzo!",
+    "nuevo"
+  ),
+
+  new Producto(
+    518,
+    "Labubu Blander ",
+    "Otros",
+    3000,
+    1900,
+    [
+      "assets/img/accesorios/labubu-blander.jfif",
+    ],
+    "La esponja más tierna y viral! Con la forma y el diseño adorable de Labubu, esta blender de textura súper suave y flexible garantiza una aplicación de maquillaje perfecta y sin líneas. ¡Difumina tu base y corrector para un acabado profesional y de ensueño!",
+    "nuevo"
+  ),
+
+
+
 ];
