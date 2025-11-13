@@ -310,6 +310,27 @@ export const productosSeed = [
     "nuevo"
   ),
   new Producto(
+    125,
+    "Lapiz Labios Karite",
+    "Labios",
+    3100,
+    2100,
+    [
+      "assets/img/labios/lapiz-labios.jfif",
+    ],
+    "Define, fija y luce unos labios espectaculares. La fórmula Velvet Touch es cremosa y de larga duración, con tonos que amarás.",
+    "nuevo"
+  ),
+
+
+
+
+
+  //OJOS
+
+
+
+  new Producto(
     201,
     "Delineador Plumón Garrita",
     "Ojos",
@@ -320,7 +341,7 @@ export const productosSeed = [
       "assets/img/ojos/delineador-garrita2.jfif",
     ],
     "¡Un delineado perfecto que dura 24 horas! Este Delineador Líquido a Prueba de Agua de ABZ te da una mirada dramática y definida con un solo trazo. Su punta de alta precisión y su fórmula de larga duración lo convierten en el aliado perfecto para un look impecable de día o de noche. ¡Y el empaque de gatito es irresistible!",
-    "nuevo"
+    "agotado"
   ),
   new Producto(
     204,
@@ -330,7 +351,7 @@ export const productosSeed = [
     4200,
     ["assets/img/ojos/delineador-abz.jfif"],
     "Define tu mirada con nuestro delineador liquido en plumón ,su punta de alta precisión te permite crear líneas finas o dramáticas con facilidad. Con una fórmula ultra resistente, este delineador se mantiene intacto todo el día, sin correrse ni desvanecerse.",
-    "nuevo"
+    "agotado"
   ),
   new Producto(
     205,
@@ -344,7 +365,7 @@ export const productosSeed = [
       
     ],
     "Eleva tu rutina de maquillaje con el Delineador Líquido Mate de Aliddy Beauty. Este delineador ha sido diseñado para ofrecer un control total, permitiéndote trazar líneas finas y elegantes o una linea de gato más dramático y atrevido. Su fórmula de secado rápido y resistente al agua te asegura una mirada definida e impecable desde la mañana hasta la noche, sin desvanecerse. ¡El toque final perfecto para cualquier look!",
-    "nuevo"
+    "agotado"
   ),
   new Producto(
     206,
@@ -357,7 +378,7 @@ export const productosSeed = [
       "assets/img/ojos/jabon-kuromi2.jfif",
     ],
     "Este producto, con un encantador diseño, es ideal para dominar y fijar hasta los vellos más rebeldes, logrando un efecto de \"ceja laminada\" de manera sencilla y rápida. Su fórmula de larga duración asegura que tus cejas se mantengan en su lugar, con una apariencia más densa y definida. Cada jabón incluye un práctico cepillo para una aplicación precisa y sin complicaciones.",
-    "nuevo"
+    "agotado"
   ),
   new Producto(
     207,
@@ -367,7 +388,7 @@ export const productosSeed = [
     3200,
     ["assets/img/ojos/jabon-melody1.jfif"],
     "Este producto, con un encantador diseño, es ideal para dominar y fijar hasta los vellos más rebeldes, logrando un efecto de \"ceja laminada\" de manera sencilla y rápida. Su fórmula de larga duración asegura que tus cejas se mantengan en su lugar, con una apariencia más densa y definida. Cada jabón incluye un práctico cepillo para una aplicación precisa y sin complicaciones.",
-    "nuevo"
+    "agotado"
   ),
   new Producto(
     208,
@@ -433,7 +454,7 @@ export const productosSeed = [
       "assets/img/ojos/sombra-pelorosadokyc2.jfif",
     ],
     "Esta paleta no es solo hermosa por fuera, también lo es por dentro. Los tonos están diseñados para complementar tu estilo y darte la libertad de crear looks impactantes. Con una mezcla de acabados que incluyen sombras con relieve, esta paleta te ofrece una experiencia de maquillaje única. Las sombras son fáciles de difuminar y se mantienen impecables por horas.",
-    "nuevo"
+    "agotado"
   ),
   new Producto(
     215,
@@ -462,7 +483,7 @@ export const productosSeed = [
       "assets/img/ojos/sombra-pomada4.jfif",
     ],
     "Consigue unas cejas perfectas y a prueba de todo con el Polvo y Crema para Cejas de La Catelrra. Su fórmula 2 en 1 te da la flexibilidad de usar la crema para una definición intensa y precisa o el polvo para un acabado más suave y natural. Ambos productos son de larga duración y resistentes al agua, asegurando que tus cejas se mantengan impecables de la mañana a la noche.",
-    "nuevo"
+    "agotado"
   ),
   new Producto(
     217,
@@ -621,10 +642,7 @@ export const productosSeed = [
 
 
 
-
-
-
-
+//ROSTRO
 
 
 
@@ -708,7 +726,7 @@ export const productosSeed = [
       "assets/img/rostro/corrector-iman2.jfif",
     ],
     "Este corrector es tu aliado perfecto para un acabado impecable. Su diseño innovador con esponja aplicadora facilita la cobertura de ojeras, manchas e imperfecciones. La fórmula ligera y de alta cobertura se difumina sin esfuerzo, dejando la piel con un aspecto radiante y uniforme.",
-    "nuevo"
+    "agotado"
   ),
   new Producto(
     307,
@@ -722,7 +740,7 @@ export const productosSeed = [
       "assets/img/rostro/corrector-karite3.jfif",
     ],
     "Despídete de las ojeras y las imperfecciones con el corrector de Karité. Su fórmula de larga duración no solo cubre, sino que también cuida tu piel. Se siente ligero y cómodo, ofreciendo un acabado natural y sin pliegues que dura desde la mañana hasta la noche. Es tu aliado perfecto para un rostro radiante.",
-    "nuevo"
+    "agotado"
   ),
   new Producto(
     308,
@@ -763,7 +781,7 @@ export const productosSeed = [
       "assets/img/rostro/rubor-liquido2.jfif",
     ],
     "Consigue un brillo natural y luminoso con el Blush Líquido de Moocmallure. Su textura ligera y sedosa se desliza suavemente sobre la piel, permitiendo una fácil construcción del color, desde un rubor sutil hasta uno más intenso. Perfecto para mejillas y labios, este producto te da un acabado fresco y jugoso que dura todo el día. ¡Añade un toque de color que ilumina tu rostro!",
-    "nuevo"
+    "agotado"
   ),
   new Producto(
     311,
@@ -786,7 +804,7 @@ export const productosSeed = [
     4000,
     ["assets/img/rostro/serum-b5.jfif"],
     "Hidrata y repara tu piel con el Sérum de Ácido Hialurónico + Vitamina B5 de BIOAQUA. Su fórmula concentrada calma la piel irritada, reduce la apariencia de los poros y proporciona una hidratación profunda para una barrera cutánea más fuerte y saludable.",
-    "nuevo"
+    "agotado"
   ),
   new Producto(
     313,
@@ -858,7 +876,7 @@ export const productosSeed = [
   ),
 
   new Producto(
-    317,
+    318,
     " 🐻Rubor de Oso: ¡Color y Ternura! 🍑",
     "Rostro",
     7000,
@@ -1290,9 +1308,11 @@ export const productosSeed = [
     15000,
     12000,
     [
-      "assets/img/accesorios/manetquilla-victoria.jfif",
-      "assets/img/accesorios/manetquilla-victoria.jfif",
-      "assets/img/accesorios/manetquilla-victoria.jfif",
+      "assets/img/accesorios/manetquilla1.png",
+      "assets/img/accesorios/manetquilla2.png",
+      "assets/img/accesorios/manetquilla3.png",
+      "assets/img/accesorios/manetquilla4.png",
+      "assets/img/accesorios/manetquilla5.png",
     ],
     "Son tu solución rápida y suave. Enriquecidas con extracto de aloe vera, limpian a profundidad párpados y rostro, dejando tu piel fresca e hidratada. ¡Llévalas contigo y desmaquíllate sin esfuerzo!",
     "nuevo"
@@ -1300,16 +1320,33 @@ export const productosSeed = [
 
   new Producto(
     518,
-    "Labubu Blander ",
+    "Labubu Beauty Blender ",
     "Otros",
     3000,
     1900,
     [
-      "assets/img/accesorios/labubu-blander.jfif",
+      "assets/img/accesorios/labubu-blender.jfif",
+      "assets/img/accesorios/labubu-blender2.jfif",
     ],
     "La esponja más tierna y viral! Con la forma y el diseño adorable de Labubu, esta blender de textura súper suave y flexible garantiza una aplicación de maquillaje perfecta y sin líneas. ¡Difumina tu base y corrector para un acabado profesional y de ensueño!",
     "nuevo"
   ),
+
+  new Producto(
+    519,
+    "Beauty Blender de Sweet Beauty",
+    "Otros",
+    3000,
+    1900,
+    [
+      "assets/img/accesorios/blender-sweet.jfif",
+      "assets/img/accesorios/blender-sweet2.jfif",
+    ],
+    "💧 Piel Perfecta y Suave. ✨Esponja de maquillaje ultra suave. Difumina base y corrector sin esfuerzo para un acabado profesional, rápido e impecable.",
+    "nuevo"
+  ),
+
+
 
 
 
