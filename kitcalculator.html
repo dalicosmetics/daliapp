@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Kit Emprendedor</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Bootstrap CSS ya lo tienes -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS Bundle (incluye Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/kitcalculator.css">
+
+  <style>
+    .modal-backdrop {
+      z-index: 1040 !important;
+    }
+
+    .modal {
+      z-index: 1050 !important;
+    }
+  </style>
+</head>
+
+<body data-boton-whatsapp="true" data-boton-carrito="true" data-boton-catalogo="true">
+  <div class="announcement-bar">
+    <div class="marquee">
+      <span>Todos nuestros productos aplican en UNIDADES</span>
+      <span>Lleva productos con precio MAYORISTA a partir de 2 unidades de la misma referencia</span>
+      <span>¡Nueva colección disponible!</span>
+      <span>Abre tu cajita con  $5000 en nuestro Live en TikTok</span>
+      <span>Envios a Nivel Nacional</span>
+      <span>¡Nueva colección disponible!</span>
+      <span>Envío gratis en pedidos superiores a $500.000</span>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg main-nav">
+      <div class="container-fluid">
+        <div class="container-fluid position-relative">
+          <a class="navbar-brand logo-container" href="index.html">
+            <img src="./assets/img/minilogo.png" alt="Logo Dali Cosmetics" class="nav-logo">
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container py-5">
+    <h1 class="text-center fw-bold mb-4">💄 Calculadora de Kit Emprendedor</h1>
+    <p class="text-center mb-4">
+      Ingresa tu presupuesto y te recomendaremos un kit de maquillaje al por mayor.
+    </p>
+
+    <div class="card shadow p-4">
+      <label class="fw-semibold">Tu presupuesto (COP):</label>
+      <input type="number" id="budgetInput" class="form-control" placeholder="Min: 10000">
+      <button class="btn btn-dark mt-3 w-100" onclick="calculateKit()">Generar mi kit ✨</button>
+    </div>
+
+    <div id="kitResults" class="mt-5"></div>
+  </div>
+
+  <!-- Modal de información de envío para Kit -->
+<div class="modal fade" id="envioModalKit" tabindex="-1" aria-labelledby="envioModalKitLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="envioModalKitLabel">Datos para el envío</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form id="envioFormKit">
+            <div class="mb-3">
+              <label for="nombreClienteKit" class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" id="nombreClienteKit" required>
+            </div>
+            <div class="mb-3">
+              <label for="telefonoClienteKit" class="form-label">Teléfono</label>
+              <input type="text" class="form-control" id="telefonoClienteKit" required>
+            </div>
+            <div class="mb-3">
+              <label for="celularClienteKit" class="form-label">Celular</label>
+              <input type="text" class="form-control" id="celularClienteKit" required>
+            </div>
+            <div class="mb-3">
+              <label for="direccionClienteKit" class="form-label">Dirección</label>
+              <textarea class="form-control" id="direccionClienteKit" rows="2" required></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="confirmarEnvioBtnKit">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- jsPDF desde CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- Scripts del proyecto -->
+  <script type="module" src="js/models.js"></script>
+  <script type="module" src="js/seed.js"></script>
+  <script type="module" src="js/kitcalculator.js"></script>
+  <script src="js/whatsapp.js"></script>
+</body>
+</html>

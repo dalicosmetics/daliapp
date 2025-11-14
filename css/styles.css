@@ -2068,11 +2068,6 @@ textarea.form-control {
 }
 
 
-¡Absolutamente! 🎀 Vamos a transformar esa paginación en algo ultra mega girly y rosadita. Usaré tonos de rosa, brillos sutiles y bordes redondeados para darle ese toque fabuloso que buscas.
-
-Aquí tienes el código CSS modificado:
-
-CSS
 
 /* PAGINACIÓN ULTRA MEGA GIRLY ROSADITA */
 #paginacion {
@@ -2112,4 +2107,10 @@ CSS
   
   /* Efecto de brillo extra para el botón activo */
   box-shadow: 0 0 10px rgba(233, 30, 99, 0.8), 0 0 20px rgba(233, 30, 99, 0.4);
+}
+
+
+.kit-banner {
+  background: linear-gradient(135deg, #ffe4f1, #ffd6e7);
+  border-left: 6px solid #ff3e87;
 }

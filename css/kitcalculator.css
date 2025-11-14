@@ -1,0 +1,38 @@
+/* kitcalculator.css */
+#budgetInput {
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  #kitResults .card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  #kitResults .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  #kitResults .card img {
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .alert {
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  
+  .alert-info {
+    background-color: #d1f2eb;
+    color: #0e6655;
+  }
+  
