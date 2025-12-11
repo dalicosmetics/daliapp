@@ -73,26 +73,25 @@ export const productosSeed = [
   ),
   new Producto(
     107,
-    "Tinta Juguito 2 Tonos O'LANNEY",
+    "Tinta Orejitas O'LANNEY",
     "Labios",
-    5000,
-    2950,
+    3500,
+    2800,
     [
-      "assets/img/labios/tinta-juguito1.jfif",
-      "assets/img/labios/tinta-juguito2.jfif",
+      "assets/img/labios/tinta-orejitas.jfif",
+      "assets/img/labios/tinta-orejitas2.jfif",
     ],
-    "Dale a tus labios un toque de color duradero con estas adorables tintas labiales inspiradas en tus personajes favoritos. Cada tinta viene en un envase único con forma de juguito, perfecto para llevar contigo. Su fórmula de larga duración no solo hidrata tus labios, sino que también deja un color vibrante y natural que no se desvanece fácilmente.",
-    
+    "Color saturado que no se transfiere. Pigmentación total y un acabado elegante que dura todo el día. ¡La tinta que no te abandona!",  
   ),
   new Producto(
     108,
-    "Tintas Hello Kitty O'LANNEY",
+    "Tintas Fresita Aliddy Beauty",
     "Labios",
-    5000,
-    3000,
+    4000,
+    2800,
     [
-      "assets/img/labios/tinta-kitty1.jfif",
-      "assets/img/labios/tinta-kitty2.jfif",
+      "assets/img/labios/tinta-fresita.jfif",
+      "assets/img/labios/tinta-fresita2.jfif",
     ],
     "¡Brilla con el Dulce Toque de Hello Kitty! ✨ Exclusivos Tintas Labiales O'LANNEY Professional. ¿Buscas un toque de magia y color para tus labios? ¡Te presentamos el adorable expositor de 24 tintas labiales O'LANNEY Professional, protagonizados por la irresistible Hello Kitty! Cada brillo es una pequeña joya que combina una fórmula hidratante con un diseño encantador que te robará el corazón.",
     
@@ -285,13 +284,12 @@ export const productosSeed = [
   ),
   new Producto(
     123,
-    "Gloss Lip Oil Corazon",
+    "Lip Gloss",
     "Labios",
-    6000,
-    4200,
+    4500,
+    3900,
     [
-      "assets/img/labios/123-Gloss-Lip-Oil-Corazon.jfif",
-      "assets/img/labios/123-Gloss-Lip-Oil-Corazon2.jfif",
+      "assets/img/labios/lip-gloss.jfif",
     ],
     "💖💧 ¡Labios hidratados y con glow! Lip Oil/Gloss Transparente con un toque de color y un envase adorable. Fórmula ligera con efecto jugoso 💦. Aplicador y tapa con diseño ¡El secreto para unos labios suaves y brillantes! ✨",
     "nuevo"
@@ -311,16 +309,90 @@ export const productosSeed = [
   ),
   new Producto(
     125,
-    "Lapiz Labios Karite",
+    "Labial Liquido con gloss Fizzy",
     "Labios",
-    3100,
-    2100,
+    4000,
+    3200,
     [
-      "assets/img/labios/lapiz-labios.jfif",
+      "assets/img/labios/labial-fizzy.jfif",
+      "assets/img/labios/labial-fizzy2.jfif",
+      "assets/img/labios/labial-fizzy3.jfif",
     ],
-    "Define, fija y luce unos labios espectaculares. La fórmula Velvet Touch es cremosa y de larga duración, con tonos que amarás.",
+    "💋 La Elegancia del Color Líquido. El labial líquido que se siente tan bien como se ve. Su textura sedosa se desliza sin esfuerzo, ofreciendo colores saturados y un acabado moderno que no reseca. ¡Tus tonos esenciales para un look sofisticado de día o de noche!",
     "nuevo"
   ),
+
+  new Producto(
+    126,
+    "Gloss con Shimmer O'LANNEY",
+    "Labios",
+    3900,
+    2900,
+    [
+      "assets/img/labios/gloss-shimer-olaney.jfif",
+      "assets/img/labios/gloss-shimer-olaney3.jfif",
+      "assets/img/labios/gloss-shimer-olaney2.jfif",
+    ],
+    "La dosis de glamour que tus labios estaban pidiendo. Pigmentación intensa con la diversión del glitter. Su fórmula es ligera y ofrece un color súper saturado",
+    "nuevo"
+  ),
+
+  new Producto(
+    127,
+    "Gloss Magico O'LANNEY ",
+    "Labios",
+    3900,
+    2900,
+    [
+      "assets/img/labios/gloss-magico-olaney.jfif",
+      "assets/img/labios/gloss-magico-olaney3.jfif",
+      "assets/img/labios/gloss-magico-olaney2.jfif",
+    ],
+    "Dale a tus labios el amor que merecen con el Lip Gloss con brillo intenso, colores adorables y una fórmula hidratante con 'Love is tea honey' que te hará sentir feliz. ¡Labios suaves, voluminosos y listos para brillar!",
+    "nuevo"
+  ),
+
+  new Producto(
+    127,
+    "Gloss Bolita O'LANNEY ",
+    "Labios",
+    3900,
+    2900,
+    [
+      "assets/img/labios/gloss-bolita1.jfif",
+      "assets/img/labios/gloss-bolita2.jfif",
+    ],
+    "Acabado aterciopelado con brillo sutil. ¡Elegancia diaria! 🎀",
+    "nuevo"
+  ),
+  new Producto(
+    128,
+    "Gloss Corona de Oro O'LANNEY ",
+    "Labios",
+    3500,
+    2800,
+    [
+      "assets/img/labios/gloss-corona-oro2.jfif",
+      "assets/img/labios/gloss-corona-oro2.jfif",
+    ],
+    "Su lujosa tapa en forma de corona y el glitter dorado te dan un brillo espectacular. Úsalo para un lujo instantáneo o sobre tu labial favorito. ¡Brillo digno de una reina!",
+    "nuevo"
+  ),
+
+  new Producto(
+    129,
+    "Balsamo Bioaqua",
+    "Labios",
+    3500,
+    2500,
+    [
+      "assets/img/labios/balsamo-bioaqua.jfif",
+    ],
+    "Hidrata, suaviza y protege los labios gracias a su extracto de aloe vera. Ideal para labios secos, aporta frescura y humectación duradera.",
+    "nuevo"
+  ),
+
+
 
 
 
@@ -332,64 +404,54 @@ export const productosSeed = [
 
   new Producto(
     201,
-    "Delineador Plumón Garrita",
+    "Lapiz 3 en 1",
     "Ojos",
-    7000,
-    4200,
+    3100,
+    2100,
     [
-      "assets/img/ojos/delineador-garrita1.jfif",
-      "assets/img/ojos/delineador-garrita2.jfif",
+      "assets/img/ojos/lapiz-3-en-1.jfif",
     ],
-    "¡Un delineado perfecto que dura 24 horas! Este Delineador Líquido a Prueba de Agua de ABZ te da una mirada dramática y definida con un solo trazo. Su punta de alta precisión y su fórmula de larga duración lo convierten en el aliado perfecto para un look impecable de día o de noche. ¡Y el empaque de gatito es irresistible!",
-    "agotado"
-  ),
-  new Producto(
-    204,
-    "Delineador en Plumon ABZ",
-    "Ojos",
-    7000,
-    4200,
-    ["assets/img/ojos/delineador-abz.jfif"],
-    "Define tu mirada con nuestro delineador liquido en plumón ,su punta de alta precisión te permite crear líneas finas o dramáticas con facilidad. Con una fórmula ultra resistente, este delineador se mantiene intacto todo el día, sin correrse ni desvanecerse.",
-    "agotado"
+    "3 en 1: La Fórmula Mágica para una Mirada Impactante. Define, enmarca y perfecciona con un solo producto Lápiz de Cejas: Rellena y da forma.Delineador Negro: Define tu mirada.Cepillo/Goupillón: Peina y difumina para un acabado natural. ¡El básico que necesitas para unas cejas perfectas y ojos definidos!",
+    "nuevo"
   ),
   new Producto(
     205,
     "Delineador Líquido Mate de Aliddy Beauty",
     "Ojos",
     3000,
-    2100,
+    2200,
     [
       "assets/img/ojos/delineador-liquido-aliddy2.jfif",
       "assets/img/ojos/delineador-liquido-aliddy1.jfif",
       
     ],
     "Eleva tu rutina de maquillaje con el Delineador Líquido Mate de Aliddy Beauty. Este delineador ha sido diseñado para ofrecer un control total, permitiéndote trazar líneas finas y elegantes o una linea de gato más dramático y atrevido. Su fórmula de secado rápido y resistente al agua te asegura una mirada definida e impecable desde la mañana hasta la noche, sin desvanecerse. ¡El toque final perfecto para cualquier look!",
-    "agotado"
+    "nuevo"
   ),
-  new Producto(
-    206,
-    "Jabon para Cejas Kuromi",
-    "Ojos",
-    5000,
-    3200,
-    [
-      "assets/img/ojos/jabon-kuromi1.jfif",
-      "assets/img/ojos/jabon-kuromi2.jfif",
-    ],
-    "Este producto, con un encantador diseño, es ideal para dominar y fijar hasta los vellos más rebeldes, logrando un efecto de \"ceja laminada\" de manera sencilla y rápida. Su fórmula de larga duración asegura que tus cejas se mantengan en su lugar, con una apariencia más densa y definida. Cada jabón incluye un práctico cepillo para una aplicación precisa y sin complicaciones.",
-    "agotado"
-  ),
-  new Producto(
-    207,
-    "Jabon para Cejas Melody",
-    "Ojos",
-    5000,
-    3200,
-    ["assets/img/ojos/jabon-melody1.jfif"],
-    "Este producto, con un encantador diseño, es ideal para dominar y fijar hasta los vellos más rebeldes, logrando un efecto de \"ceja laminada\" de manera sencilla y rápida. Su fórmula de larga duración asegura que tus cejas se mantengan en su lugar, con una apariencia más densa y definida. Cada jabón incluye un práctico cepillo para una aplicación precisa y sin complicaciones.",
-    "agotado"
-  ),
+  
+  //new Producto(
+    // 206,
+   //  "Jabon para Cejas Kuromi",
+   //  "Ojos",
+   //  5000,
+   //  3200,
+   //  [
+    //   "assets/img/ojos/jabon-kuromi1.jfif",
+    //   "assets/img/ojos/jabon-kuromi2.jfif",
+   //  ],
+    // "Este producto, con un encantador diseño, es ideal para dominar y fijar hasta los vellos más rebeldes, logrando un efecto de \"ceja laminada\" de manera sencilla y rápida. Su fórmula de larga duración asegura que tus cejas se mantengan en su lugar, con una apariencia más densa y definida. Cada jabón incluye un práctico cepillo para una aplicación precisa y sin complicaciones.",
+    // "agotado"
+   //),
+   //new Producto(
+    // 207,
+     //"Jabon para Cejas Melody",
+    // "Ojos",
+    // 5000,
+    // 3200,
+    // ["assets/img/ojos/jabon-melody1.jfif"],
+    // "Este producto, con un encantador diseño, es ideal para dominar y fijar hasta los vellos más rebeldes, logrando un efecto de \"ceja laminada\" de manera sencilla y rápida. Su fórmula de larga duración asegura que tus cejas se mantengan en su lugar, con una apariencia más densa y definida. Cada jabón incluye un práctico cepillo para una aplicación precisa y sin complicaciones.",
+   //  "agotado"
+   //),
   new Producto(
     208,
     "Paleta Dreamer",
@@ -415,7 +477,7 @@ export const productosSeed = [
       "assets/img/ojos/paleta-librokyc2.jfif",
     ],
     "Una curación de 36 sombras altamente pigmentadas, que van desde los neutros cálidos y fríos para el día a día, hasta una explosión de colores neón y pastel que te permitirán crear looks audaces y creativos.",
-    "nuevo"
+    "agotado"
   ),
   new Producto(
     212,
@@ -474,8 +536,8 @@ export const productosSeed = [
     216,
     "Sombra y Pomada Cejas",
     "Ojos",
-    12000,
-    7000,
+    9500,
+    7400,
     [
       "assets/img/ojos/sombra-pomada1.jfif",
       "assets/img/ojos/sombra-pomada2.jfif",
@@ -483,7 +545,7 @@ export const productosSeed = [
       "assets/img/ojos/sombra-pomada4.jfif",
     ],
     "Consigue unas cejas perfectas y a prueba de todo con el Polvo y Crema para Cejas de La Catelrra. Su fórmula 2 en 1 te da la flexibilidad de usar la crema para una definición intensa y precisa o el polvo para un acabado más suave y natural. Ambos productos son de larga duración y resistentes al agua, asegurando que tus cejas se mantengan impecables de la mañana a la noche.",
-    "agotado"
+    "nuevo"
   ),
   new Producto(
     217,
@@ -640,6 +702,9 @@ export const productosSeed = [
   ),
 
 
+  
+
+
 
 
 //ROSTRO
@@ -717,30 +782,29 @@ export const productosSeed = [
   ),
   new Producto(
     306,
-    "Corrector de ojeras difuminador",
+    "Corrector Aplicador Yumbo",
     "Rostro",
-    7000,
-    4900,
+    4500,
+    3400,
     [
-      "assets/img/rostro/corrector-iman1.jfif",
-      "assets/img/rostro/corrector-iman2.jfif",
+      "assets/img/rostro/Corrector-aplicador-Yumbo.jfif",
+      "assets/img/rostro/Corrector-aplicador-Yumbo2.jfif",
     ],
-    "Este corrector es tu aliado perfecto para un acabado impecable. Su diseño innovador con esponja aplicadora facilita la cobertura de ojeras, manchas e imperfecciones. La fórmula ligera y de alta cobertura se difumina sin esfuerzo, dejando la piel con un aspecto radiante y uniforme.",
-    "agotado"
+    "Tu piel, pero mejorada. Borra ojeras, camufla granitos y esculpe tu rostro en segundos. Alta cobertura con acabado natural que dura todo el día. ¡El secreto para un maquillaje impecable!",
+    "nuevo"
   ),
   new Producto(
     307,
-    "Corrector de ojeras Karite diferentes tonos",
+    "Iluminador en Barra Iman Of Noble",
     "Rostro",
-    7500,
-    4500,
+    4000,
+    3000,
     [
-      "assets/img/rostro/corrector-karite1.jfif",
-      "assets/img/rostro/corrector-karite2.jfif",
-      "assets/img/rostro/corrector-karite3.jfif",
+      "assets/img/rostro/iluminador-iman-of-noble.jfif",
+      "assets/img/rostro/iluminador-iman-of-noble2.jfif",
     ],
-    "Despídete de las ojeras y las imperfecciones con el corrector de Karité. Su fórmula de larga duración no solo cubre, sino que también cuida tu piel. Se siente ligero y cómodo, ofreciendo un acabado natural y sin pliegues que dura desde la mañana hasta la noche. Es tu aliado perfecto para un rostro radiante.",
-    "agotado"
+    "Iluminador cremoso iridiscente. Su color que cambia con la luz te da un glow mágico y de fantasía. ¡Un brillo de otro mundo!",
+    "nuevo"
   ),
   new Producto(
     308,
@@ -1037,6 +1101,17 @@ export const productosSeed = [
     "Dale a tu piel un impulso de hidratación con esta divertida mascarilla facial. Su diseño adorable y su fórmula nutritiva trabajan juntos para dejar la piel suave y radiante. Perfecta para una sesión de cuidado personal en casa, esta mascarilla ayuda a rejuvenecer la piel y a darle un aspecto fresco y saludable.",
     "nuevo"
   ),
+
+  new Producto(
+    414,
+    "Mascarilla Durazno Bioaqua",
+    "Skincare",
+    3000,
+    1500,
+    ["assets/img/skincare/mascarilla-durazno.jfif"],
+    "Dale a tu piel un impulso de hidratación con esta divertida mascarilla facial. Su diseño adorable y su fórmula nutritiva trabajan juntos para dejar la piel suave y radiante. Perfecta para una sesión de cuidado personal en casa, esta mascarilla ayuda a rejuvenecer la piel y a darle un aspecto fresco y saludable.",
+    "nuevo"
+  ),
   new Producto(
     430,
     "Primer Aguacate",
@@ -1073,6 +1148,10 @@ export const productosSeed = [
     "✨💜  Primer 3D de Mocallure®! 🦇 La base perfecta para tu maquillaje. Consigue una fijación Super Stay 💧 y una duración de ¡24 horas! ⏰ Prepara tu piel con el primer más cute y rebelde. ¡Ideal para exhibir en el display de 24 piezas!",
     "nuevo"
   ),
+
+
+
+
   new Producto(
     500,
     "Par de Caimanes Hawaianos Pequeños",
@@ -1089,14 +1168,14 @@ export const productosSeed = [
     501,
     "Brochas Cola de Sirena",
     "Otros",
-    12000,
-    8250,
+    11500,
+    9900,
     [
       "assets/img/ojos/brocha-sirena1.jfif",
       "assets/img/ojos/brocha-sirena2.jfif",
     ],
     "Crea looks de fantasía con nuestro Set de Brochas con Diseño de Sirena. Cada set de 10 brochas presenta un mango de cola de sirena en colores metálicos, ideal para aplicar y difuminar maquillaje en ojos y rostro. ¡Un toque mágico para tu colección de belleza!",
-    "agotado"
+    "nuevo"
   ),
   new Producto(
     502,

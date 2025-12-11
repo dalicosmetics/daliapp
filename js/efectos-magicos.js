@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Corazones flotando 💖 ---
-  const HEARTS = 1;
+  const HEARTS = 4;
   for (let i = 0; i < HEARTS; i++) {
     const heart = document.createElement('span');
-    heart.textContent = '👄';
+    heart.textContent = '❄️';
     heart.classList.add('heart');
     heart.style.left = Math.random() * 100 + 'vw';
     heart.style.fontSize = (16 + Math.random() * 22) + 'px';
@@ -29,10 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Estrellitas flotando ✨ ---
-  const STARS = 1;
+  const STARS = 2;
   for (let i = 0; i < STARS; i++) {
     const star = document.createElement('span');
-    star.textContent = '💄';
+    star.textContent = '🎄';
     star.classList.add('star');
     star.style.left = Math.random() * 100 + 'vw';
     star.style.fontSize = (16 + Math.random() * 22) + 'px';
