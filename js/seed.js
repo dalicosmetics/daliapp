@@ -1425,8 +1425,44 @@ export const productosSeed = [
     "nuevo"
   ),
 
+  new Producto(
+    521,
+    "Fijador de Maquillaje Stich",
+    "Otros",
+    7500,
+    6500,
+    [
+      "assets/img/accesorios/fijador-stich.jfif",
+    ],
+    "Sella tu look con este divertido fijador de maquillaje. Su fórmula ayuda a prolongar la duración de la base y sombras, ofreciendo un acabado refrescante. El envase en forma de Stitch qué lo convierte en una pieza de colección irresistible.",
+    "nuevo"
+  ),
 
+  
+  new Producto(
+    522,
+    "Cremas Victoria Secret",
+    "Otros",
+    8500,
+    7500,
+    [
+      "assets/img/accesorios/cremas-victoria.jfif",
+    ],
+    "Las Fragancias Icónicas! Disfruta de la hidratación profunda con la crema de Victoria's Secret. Su fórmula Ultra-Moisturizing nutre la piel, dejando un aroma duradero.",
+    "nuevo"
+  ),
 
-
+  new Producto(
+    523,
+    "Perfumes Stich",
+    "Otros",
+    6000,
+    5000,
+    [
+      "assets/img/accesorios/perfume-stich.jfif",
+    ],
+    "Perfumes en botellas deluxe con tapa dorada y la imagen de Stitch. El display incluye una variedad de fragancias",
+    "nuevo"
+  ),
 
 ];

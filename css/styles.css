@@ -131,6 +131,7 @@ h2{color:var(--secondary);letter-spacing:.3px;margin:1rem 0 1.25rem}
   width: 100%;
   padding: 8px 0;
   margin-top: 2.4rem;  /* o más si se ve muy pegado */
+  position: relative;
 }
 
 /* 🔹 Ajustar el container interno */
@@ -1740,6 +1741,7 @@ Formulario de contacto
   white-space: nowrap;
   font-weight: 600;
   letter-spacing: .5px;
+  position: relative;
 }
 
 .marquee {
