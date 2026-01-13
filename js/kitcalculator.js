@@ -13,6 +13,7 @@ window.kitTemporal = [];
 window.productosConservados = [];
 window.presupuestoTotal = 0;
 window.descuentoKit = 0;
+window.esRecalculo = false;
 
 const MIN_PRESUPUESTO = 10000;
 
@@ -22,13 +23,28 @@ const MIN_PRESUPUESTO = 10000;
 export function calculateKit() {
   const budgetInput = document.getElementById("budgetInput");
   const budget = Number(budgetInput.value);
+  const btnGenerar = document.getElementById("btnGenerarKit");
 
-  // Guardamos presupuesto original solo la primera vez
+  if (!budget) return;
+
+  // 🧠 Guardar presupuesto solo la primera vez
   if (!window.presupuestoTotal) {
     window.presupuestoTotal = budget;
+
+    // 🔒 Bloquear botón generar kit después del primer uso
+    if (btnGenerar) {
+      btnGenerar.disabled = true;
+      btnGenerar.classList.add("disabled");
+    }
   }
 
-  if (!budget || budget < MIN_PRESUPUESTO) {
+  // 🚫 Evitar usar "Generar kit" cuando ya existe un kit
+  if (!window.esRecalculo && window.productosConservados.length > 0) {
+    return;
+  }
+
+  // 🔒 Validar mínimo SOLO en el cálculo inicial
+  if (!window.esRecalculo && budget < MIN_PRESUPUESTO) {
     document.getElementById("kitResults").innerHTML = `
       <div class="alert alert-danger">
         Ingresa un presupuesto válido de al menos $${MIN_PRESUPUESTO.toLocaleString()}.
@@ -39,13 +55,11 @@ export function calculateKit() {
   const activos = products.filter(
     (p) => p.precioMayor && p.estado !== "agotado"
   );
-
   if (activos.length === 0) return;
 
   let restante = budget;
   window.kitTemporal = [];
 
-  // Agrupar por categoría
   const categorias = {};
   activos.forEach((p) => {
     if (!categorias[p.categoria]) categorias[p.categoria] = [];
@@ -56,9 +70,8 @@ export function calculateKit() {
   const maxUnidadesPorProducto = 4;
   const minUnidadesPorProducto = 2;
   let intentos = 0;
-  const maxIntentos = 100;
 
-  while (restante > 0 && intentos < maxIntentos) {
+  while (restante > 0 && intentos < 100) {
     intentos++;
 
     const catKeys = Object.keys(categorias).filter(
@@ -87,10 +100,7 @@ export function calculateKit() {
 
     const unidades =
       minUnidadesPorProducto +
-      Math.floor(
-        Math.random() *
-          (maxUnidades - minUnidadesPorProducto + 1)
-      );
+      Math.floor(Math.random() * (maxUnidades - minUnidadesPorProducto + 1));
 
     const subtotal = unidades * producto.precioMayor;
 
@@ -111,7 +121,7 @@ export function calculateKit() {
 }
 
 /* ============================================================
-   RENDER KIT (CON CONSERVADOS)
+   RENDER KIT
 ============================================================ */
 function renderKit() {
   const listaKit = document.getElementById("listaKit");
@@ -127,10 +137,8 @@ function renderKit() {
 
   let total = 0;
 
-  // Productos conservados
   if (window.productosConservados.length > 0) {
     contConservados.classList.remove("d-none");
-
     window.productosConservados.forEach((p) => {
       total += p.subtotal;
       listaConservados.innerHTML += cardProducto(p, false);
@@ -139,7 +147,6 @@ function renderKit() {
     contConservados.classList.add("d-none");
   }
 
-  // Productos nuevos
   window.kitTemporal.forEach((p) => {
     total += p.subtotal;
     listaKit.innerHTML += cardProducto(p, true);
@@ -149,21 +156,23 @@ function renderKit() {
   resumen.classList.remove("d-none");
   btnRecalcular.classList.remove("d-none");
 
-  // Saldo restante
-  const gastado =
-    window.productosConservados.reduce((a, p) => a + p.subtotal, 0) +
-    window.kitTemporal.reduce((a, p) => a + p.subtotal, 0);
+  const totalConservados = window.productosConservados.reduce(
+    (a, p) => a + p.subtotal,
+    0
+  );
+  const totalKit = window.kitTemporal.reduce(
+    (a, p) => a + p.subtotal,
+    0
+  );
 
-  const saldo = Math.max(window.presupuestoTotal - gastado, 0);
-  saldoSpan.textContent = `$${saldo.toLocaleString()}`;
+  const saldoReal =
+    window.presupuestoTotal - totalConservados - totalKit;
 
-  document
-    .getElementById("factura-kit")
-    ?.addEventListener("click", abrirModalCliente);
+  saldoSpan.textContent = `$${Math.max(saldoReal, 0).toLocaleString()}`;
 }
 
 /* ============================================================
-   CARD DE PRODUCTO
+   CARD PRODUCTO
 ============================================================ */
 function cardProducto(p, permitirConservar) {
   return `
@@ -197,134 +206,29 @@ window.conservarProducto = function (id) {
 
   const producto = window.kitTemporal.splice(index, 1)[0];
   window.productosConservados.push(producto);
-
   renderKit();
 };
 
 /* ============================================================
-   RECALCULAR CON SALDO RESTANTE
+   RECALCULAR
 ============================================================ */
 window.recalcularKit = function () {
-  const gastado = window.productosConservados.reduce(
+  const totalConservados = window.productosConservados.reduce(
     (a, p) => a + p.subtotal,
     0
   );
 
-  const saldo = window.presupuestoTotal - gastado;
-
-  if (saldo < 1000) {
-    alert("El saldo restante es insuficiente para recalcular.");
+  const disponible = window.presupuestoTotal - totalConservados;
+  if (disponible <= 0) {
+    alert("No queda presupuesto para recalcular.");
     return;
   }
 
-  document.getElementById("budgetInput").value = saldo;
+  window.esRecalculo = true;
+  document.getElementById("budgetInput").value = disponible;
   window.kitTemporal = [];
-
   calculateKit();
+  window.esRecalculo = false;
 };
-
-/* ============================================================
-   MODAL CLIENTE
-============================================================ */
-function abrirModalCliente() {
-  const envioModal = new bootstrap.Modal(
-    document.getElementById("envioModalKit")
-  );
-  envioModal.show();
-
-  document.getElementById("confirmarEnvioBtnKit").onclick = () => {
-    const nombre = document.getElementById("nombreClienteKit").value.trim();
-    const telefono =
-      document.getElementById("telefonoClienteKit").value.trim();
-    const celular =
-      document.getElementById("celularClienteKit").value.trim();
-    const direccion =
-      document.getElementById("direccionClienteKit").value.trim();
-
-    if (!nombre || !telefono || !celular || !direccion) {
-      alert("Por favor completa todos los campos.");
-      return;
-    }
-
-    envioModal.hide();
-    generarFacturaBonita({ nombre, telefono, celular, direccion });
-  };
-}
-
-/* ============================================================
-   FACTURA PROFESIONAL (SIN CAMBIOS)
-============================================================ */
-async function generarFacturaBonita(cliente) {
-  const doc = new jsPDF({ unit: "pt", format: "letter" });
-
-  const logoDataURL = await getImageDataURL("./assets/img/minilogo.png");
-  doc.addImage(logoDataURL, "PNG", 40, 40, 50, 50);
-
-  doc.setFont("helvetica", "bold");
-  doc.setFontSize(22);
-  doc.text("FACTURA DE KIT EMPRENDEDOR", 110, 60);
-
-  doc.setFont("helvetica", "normal");
-  doc.setFontSize(12);
-  doc.text("Dali Cosmetics - Generada automáticamente", 110, 80);
-
-  doc.setFont("helvetica", "bold");
-  doc.text("Datos del Cliente:", 40, 120);
-  doc.setFont("helvetica", "normal");
-  doc.text(`Nombre: ${cliente.nombre}`, 40, 135);
-  doc.text(`Teléfono: ${cliente.telefono}`, 40, 150);
-  doc.text(`Celular: ${cliente.celular}`, 40, 165);
-  doc.text(`Dirección: ${cliente.direccion}`, 40, 180);
-
-  doc.line(40, 200, 550, 200);
-
-  let y = 230;
-  let total = 0;
-
-  for (const p of [
-    ...window.productosConservados,
-    ...window.kitTemporal,
-  ]) {
-    total += p.subtotal;
-
-    const imgData = await getImageDataURL(p.imagen);
-    doc.addImage(imgData, "JPEG", 40, y - 12, 30, 30);
-
-    doc.text(p.nombre.substring(0, 25), 80, y);
-    doc.text(String(p.cantidad), 260, y);
-    doc.text(`$${p.precio.toLocaleString()}`, 330, y);
-    doc.text(`$${p.subtotal.toLocaleString()}`, 430, y);
-
-    y += 40;
-    if (y > 700) {
-      doc.addPage();
-      y = 60;
-    }
-  }
-
-  doc.setFont("helvetica", "bold");
-  doc.text(`TOTAL: $${total.toLocaleString()}`, 40, y + 20);
-
-  doc.save("Factura_Kit.pdf");
-}
-
-/* ============================================================
-   IMG → DATAURL
-============================================================ */
-function getImageDataURL(url) {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.crossOrigin = "anonymous";
-    img.onload = () => {
-      const canvas = document.createElement("canvas");
-      canvas.width = 50;
-      canvas.height = 50;
-      canvas.getContext("2d").drawImage(img, 0, 0, 50, 50);
-      resolve(canvas.toDataURL("image/jpeg"));
-    };
-    img.onerror = reject;
-    img.src = url;
-  });
-}
 
 window.calculateKit = calculateKit;
