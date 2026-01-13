@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Corazones flotando 💖 ---
-  const HEARTS = 2;
+  const HEARTS = 1;
   for (let i = 0; i < HEARTS; i++) {
     const heart = document.createElement('span');
     heart.textContent = '💋';
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- Estrellitas flotando ✨ ---
-  const STARS = 2;
+  const STARS = 1;
   for (let i = 0; i < STARS; i++) {
     const star = document.createElement('span');
     star.textContent = '🎀';
